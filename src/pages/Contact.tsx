@@ -1,0 +1,254 @@
+import { useState } from 'react';
+import { Phone, MapPin, Mail, Clock, MessageSquare } from 'lucide-react';
+import { Button } from '../components/ui/button';
+import { Input } from '../components/ui/input';
+import { Textarea } from '../components/ui/textarea';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../components/ui/select';
+import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
+
+const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    service: '',
+    message: ''
+  });
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    console.log('Form submitted:', formData);
+    // Handle form submission here
+  };
+
+  const handleInputChange = (field: string, value: string) => {
+    setFormData(prev => ({ ...prev, [field]: value }));
+  };
+
+  return (
+    <div className="py-16">
+      <div className="container mx-auto px-4">
+        {/* Header */}
+        <div className="text-center mb-12">
+          <h1 className="text-4xl md:text-5xl font-bold text-[#004078] mb-4">
+            We're Here to Help — Let's Talk!
+          </h1>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            Ready to solve your plumbing or HVAC needs? Get in touch with our friendly team today.
+          </p>
+        </div>
+
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          {/* Contact Form */}
+          <Card>
+            <CardHeader>
+              <CardTitle className="text-2xl text-[#004078]">Send Us a Message</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <iframe
+                  src="https://st.sendajob.com/MY/servicerequest/d82d54387f73c8d1762b557058d5aec309b09ace_f.html"
+                  className="w-full mb-8 rounded"
+                  style={{ minHeight: 400, border: 'none', overflow: 'hidden' }}
+                  title="Service Request Form"
+                  scrolling="no"
+              />
+
+              {/*
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div>
+                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                    Full Name *
+                  </label>
+                  <Input
+                      id="name"
+                      type="text"
+                      required
+                      value={formData.name}
+                      onChange={(e) => handleInputChange('name', e.target.value)}
+                      placeholder="Enter your full name"
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                    Email Address *
+                  </label>
+                  <Input
+                      id="email"
+                      type="email"
+                      required
+                      value={formData.email}
+                      onChange={(e) => handleInputChange('email', e.target.value)}
+                      placeholder="Enter your email address"
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
+                    Phone Number *
+                  </label>
+                  <Input
+                      id="phone"
+                      type="tel"
+                      required
+                      value={formData.phone}
+                      onChange={(e) => handleInputChange('phone', e.target.value)}
+                      placeholder="Enter your phone number"
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
+                    Service Needed
+                  </label>
+                  <Select onValueChange={(value) => handleInputChange('service', value)}>
+                    <SelectTrigger>
+                      <SelectValue placeholder="Select a service"/>
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="plumbing">Plumbing</SelectItem>
+                      <SelectItem value="hvac">HVAC</SelectItem>
+                      <SelectItem value="emergency">Emergency Service</SelectItem>
+                      <SelectItem value="maintenance">Maintenance</SelectItem>
+                      <SelectItem value="other">Other</SelectItem>
+                    </SelectContent>
+                  </Select>
+                </div>
+
+                <div>
+                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                    Message/Service Details *
+                  </label>
+                  <Textarea
+                      id="message"
+                      required
+                      value={formData.message}
+                      onChange={(e) => handleInputChange('message', e.target.value)}
+                      placeholder="Please describe your service needs or any questions you have"
+                      rows={4}
+                  />
+                </div>
+
+                <Button type="submit" className="w-full bg-[#e23b19] hover:bg-[#e23b19]/90">
+                  Send Message
+                </Button>
+              </form>
+              */}
+
+              <div className="bg-gray-50 rounded-lg p-6 mt-8 shadow-inner">
+                              <h3 className="text-xl font-semibold text-[#004078] mb-2">Why Contact Us?</h3>
+                              <ul className="list-disc list-inside text-gray-700 space-y-1">
+                                <li>Fast response times for all service requests</li>
+                                <li>Licensed and experienced technicians</li>
+                                <li>Upfront, honest pricing</li>
+                                <li>Comprehensive plumbing and HVAC solutions</li>
+                                <li>Emergency services available 24/7</li>
+                              </ul>
+                              <p className="mt-4 text-gray-600">
+                                Our team is ready to answer your questions and provide the help you need. Reach out today and experience our commitment to quality service!
+                              </p>
+                            </div>
+            </CardContent>
+          </Card>
+
+          {/* Contact Information */}
+          <div className="space-y-8">
+            {/* Direct Contact Info */}
+            <Card>
+              <CardHeader>
+                <CardTitle className="text-2xl text-[#004078]">Contact Information</CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-6">
+                <div className="flex items-start space-x-4">
+                  <Phone className="h-6 w-6 text-[#e23b19] mt-1"/>
+                  <div>
+                    <h3 className="font-semibold text-[#004078]">Phone</h3>
+                    <a href="tel:9519046660" className="text-lg text-gray-600 hover:text-[#e23b19]">
+                      (951) 904-6660
+                    </a>
+                    <p className="text-sm text-gray-500">Click to call on mobile</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start space-x-4">
+                  <MapPin className="h-6 w-6 text-[#e23b19] mt-1"/>
+                  <div>
+                    <h3 className="font-semibold text-[#004078]">Address</h3>
+                    <a
+                        href="https://maps.google.com/?q=100+W.+Stuart+Ave.,+Redlands,+CA+92374"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-gray-600 hover:text-[#e23b19]"
+                    >
+                      100 W. Stuart Ave.<br/>
+                      Redlands, CA 92374
+                    </a>
+                  </div>
+                </div>
+
+                <div className="flex items-start space-x-4">
+                  <Mail className="h-6 w-6 text-[#e23b19] mt-1"/>
+                  <div>
+                    <h3 className="font-semibold text-[#004078]">Email</h3>
+                    <a href="mailto:info@quickprosplumbingandair.com" className="text-gray-600 hover:text-[#e23b19]">
+                      info@quickprosplumbingandair.com
+                    </a>
+                  </div>
+                </div>
+
+                <div className="flex items-start space-x-4">
+                  <Clock className="h-6 w-6 text-[#e23b19] mt-1"/>
+                  <div>
+                    <h3 className="font-semibold text-[#004078]">Hours of Operation</h3>
+                    <div className="text-gray-600">
+                      <p>Monday - Friday: 7:00 AM - 7:00 PM</p>
+                      <p>Saturday: 8:00 AM - 5:00 PM</p>
+                      <p>Sunday: Emergency Service Only</p>
+                      <p className="text-[#e23b19] font-semibold mt-2">24/7 Emergency Service Available</p>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Emergency Callout */}
+            <Card className="bg-[#e23b19] text-white">
+              <CardContent className="p-6 text-center">
+                <MessageSquare className="h-12 w-12 mx-auto mb-4"/>
+                <h3 className="text-2xl font-bold mb-2">Emergency? Call Us 24/7!</h3>
+                <p className="mb-4">Plumbing and HVAC emergencies don't wait for business hours.</p>
+                <Button asChild variant="outline" className="text-[#e23b19] border-white hover:bg-white">
+                  <a href="tel:9519046660">(951) 904-6660</a>
+                </Button>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+
+        {/* Map Embed */}
+        <div className="mt-16">
+          <h2 className="text-2xl font-bold text-[#004078] mb-6 text-center">Find Us</h2>
+          <div className="bg-gray-200 rounded-lg h-96 flex items-center justify-center">
+            <div className="text-center text-gray-600">
+              <MapPin className="h-12 w-12 mx-auto mb-4"/>
+              <p className="text-lg font-semibold">Interactive Google Maps</p>
+              <p>100 W. Stuart Ave., Redlands, CA 92374</p>
+              <Button asChild className="mt-4 bg-[#004078] hover:bg-[#004078]/90">
+                <a
+                    href="https://maps.google.com/?q=100+W.+Stuart+Ave.,+Redlands,+CA+92374"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                  Open in Google Maps
+                </a>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Contact;

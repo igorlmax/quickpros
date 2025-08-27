@@ -1,0 +1,209 @@
+import { Link } from 'react-router-dom';
+import { Phone, Thermometer, Snowflake, Wind, Settings, Shield, Clock, Star } from 'lucide-react';
+import { Button } from '../components/ui/button';
+import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
+
+const HVAC = () => {
+  const services = [
+    {
+      icon: <Snowflake className="h-8 w-8 text-[#e23b19]" />,
+      title: "AC Repair & Maintenance",
+      description: "Keep your home cool and comfortable with our comprehensive air conditioning services. We repair all makes and models, perform seasonal tune-ups, and provide preventative maintenance to extend your system's life."
+    },
+    {
+      icon: <Thermometer className="h-8 w-8 text-[#e23b19]" />,
+      title: "Furnace Repair & Installation",
+      description: "Stay warm through the coldest months with reliable furnace services. Our certified technicians install, repair, and maintain gas and electric furnaces to keep your home comfortable year-round."
+    },
+    {
+      icon: <Settings className="h-8 w-8 text-[#e23b19]" />,
+      title: "New System Installations",
+      description: "Upgrade to a more efficient HVAC system with professional installation services. We help you choose the right system for your home and budget, ensuring optimal performance and energy savings."
+    },
+    {
+      icon: <Settings className="h-8 w-8 text-[#e23b19]" />,
+      title: "Thermostat Upgrades",
+      description: "Modernize your home comfort with smart thermostat installation. Programmable and WiFi-enabled thermostats help you save energy and maintain perfect temperatures automatically."
+    },
+    {
+      icon: <Wind className="h-8 w-8 text-[#e23b19]" />,
+      title: "Indoor Air Quality",
+      description: "Breathe easier with our indoor air quality solutions. We install air purifiers, humidifiers, dehumidifiers, and advanced filtration systems to improve your home's air quality."
+    },
+    {
+      icon: <Shield className="h-8 w-8 text-[#e23b19]" />,
+      title: "Commercial HVAC",
+      description: "Keep your business comfortable with commercial HVAC services. We service office buildings, retail spaces, restaurants, and industrial facilities with reliable, efficient solutions."
+    },
+    {
+      icon: <Snowflake className="h-8 w-8 text-[#e23b19]" />,
+      title: "Ductless Systems",
+      description: "Enjoy zone-controlled comfort with ductless mini-split systems. Perfect for room additions, older homes without ductwork, or areas needing independent temperature control."
+    },
+    {
+      icon: <Thermometer className="h-8 w-8 text-[#e23b19]" />,
+      title: "Heat Pumps",
+      description: "Experience year-round comfort with energy-efficient heat pump systems. These versatile units provide both heating and cooling, making them perfect for our Inland Empire climate."
+    }
+  ];
+
+  return (
+    <div className="py-16">
+      <div className="container mx-auto px-4">
+        {/* SEO-Optimized Intro */}
+        <div className="text-center mb-12">
+          <h1 className="text-4xl md:text-5xl font-bold text-[#004078] mb-6">
+            Expert HVAC Services in Redlands & the Inland Empire
+          </h1>
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            QuickPros Plumbing & Air is your local HVAC specialist for heating and air conditioning in Redlands and surrounding cities.
+          </p>
+        </div>
+
+        {/* Hero Image with Bucky */}
+        <div className="text-center mb-16">
+          <img 
+            src="/logo.jpg"
+            alt="Bucky the Beaver with HVAC Tools" 
+            className="mx-auto max-w-md w-full rounded-lg shadow-lg"
+          />
+        </div>
+
+        {/* Services Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          {services.map((service, index) => (
+            <Card key={index} className="hover:shadow-lg transition-shadow">
+              <CardHeader>
+                <CardTitle className="flex items-center text-lg text-[#004078]">
+                  {service.icon}
+                  <span className="ml-3">{service.title}</span>
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600 text-sm">{service.description}</p>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+
+        {/* Seasonal CTA */}
+        <div className="bg-gradient-to-r from-[#00589f] to-[#004078] text-white rounded-lg p-8 text-center mb-16">
+          <h2 className="text-2xl md:text-3xl font-bold mb-4">
+            Get Your System Ready Before Summer or Winter Hits!
+          </h2>
+          <p className="text-lg mb-6">
+            Don't wait for extreme weather to test your HVAC system. Schedule preventative maintenance today and avoid costly emergency repairs.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button asChild size="lg" className="bg-[#e23b19] hover:bg-[#e23b19]/90">
+              <Link to="/book-online">Schedule Maintenance</Link>
+            </Button>
+            <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-[#004078]">
+              <a href="tel:9519046660">
+                <Phone className="h-5 w-5 mr-2" />
+                (951) 904-6660
+              </a>
+            </Button>
+          </div>
+        </div>
+
+        {/* Maintenance Membership Highlight */}
+        <Card className="mb-16 border-[#f8a825] border-2">
+          <CardContent className="p-8 text-center">
+            <div className="bg-[#f8a825] rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+              <Shield className="h-8 w-8 text-[#004078]" />
+            </div>
+            <h2 className="text-2xl font-bold text-[#004078] mb-4">
+              Ask About Our Maintenance Membership Plans
+            </h2>
+            <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
+              Join our VIP maintenance program and enjoy priority service, discounted repairs, annual tune-ups, and extended warranties. Keep your HVAC system running efficiently year-round while saving money on service calls.
+            </p>
+            <Button asChild className="bg-[#004078] hover:bg-[#004078]/90">
+              <Link to="/contact">Learn More About Membership</Link>
+            </Button>
+          </CardContent>
+        </Card>
+
+        {/* Before/After Placeholder */}
+        <div className="mb-16">
+          <h2 className="text-2xl font-bold text-[#004078] text-center mb-8">Our Work Speaks for Itself</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <Card>
+              <CardHeader>
+                <CardTitle className="text-xl text-[#004078]">Before: Old, Inefficient System</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="bg-gray-200 h-48 rounded-lg flex items-center justify-center mb-4">
+                  <p className="text-gray-500">Before Photo Placeholder</p>
+                </div>
+                <p className="text-gray-600">
+                  This 20-year-old system was costing the homeowner hundreds in energy bills and frequent repairs.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardHeader>
+                <CardTitle className="text-xl text-[#004078]">After: Modern, Energy-Efficient Installation</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="bg-gray-200 h-48 rounded-lg flex items-center justify-center mb-4">
+                  <p className="text-gray-500">After Photo Placeholder</p>
+                </div>
+                <p className="text-gray-600">
+                  Our new high-efficiency system reduced energy costs by 40% and provides consistent comfort year-round.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+
+        {/* Local Keyword Text Block */}
+        <div className="bg-gray-50 rounded-lg p-8 mb-16">
+          <h2 className="text-2xl font-bold text-[#004078] mb-6">
+            HVAC Services in Redlands, Heating Repairs in Highland, AC Installations in San Bernardino
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h3 className="text-xl font-semibold text-[#004078] mb-3">Redlands HVAC Specialists</h3>
+              <p className="text-gray-600 mb-4">
+                As your local Redlands HVAC company, we understand the unique climate challenges of the Inland Empire. From scorching summers to chilly winters, we keep your home comfortable year-round with reliable heating and cooling solutions.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-[#004078] mb-3">Emergency HVAC Service</h3>
+              <p className="text-gray-600 mb-4">
+                When your AC fails on a 100-degree day or your heater stops working on a cold night, QuickPros is here to help. We provide 24/7 emergency HVAC service throughout Highland, Yucaipa, San Bernardino, and surrounding areas.
+              </p>
+            </div>
+          </div>
+          <div className="mt-6">
+            <p className="text-gray-600">
+              Our certified HVAC technicians serve residential and commercial customers in Redlands, Highland, Yucaipa, Mentone, Loma Linda, Colton, San Bernardino, Calimesa, Banning, Beaumont, and Riverside. Contact QuickPros today for all your heating and air conditioning needs.
+            </p>
+          </div>
+        </div>
+
+        {/* Customer Testimonial */}
+        <Card>
+          <CardContent className="p-8 text-center">
+            <div className="flex justify-center mb-4">
+              {[...Array(5)].map((_, i) => (
+                <Star key={i} className="h-5 w-5 text-[#f8a825] fill-current" />
+              ))}
+            </div>
+            <blockquote className="text-lg text-gray-600 mb-4">
+              "Our old AC unit died right before a heat wave. QuickPros had a new system installed the next day! The technicians were professional, clean, and explained everything clearly. Our energy bills have already dropped significantly."
+            </blockquote>
+            <cite className="font-semibold text-[#004078]">
+              - Robert and Linda K., Highland, CA
+            </cite>
+          </CardContent>
+        </Card>
+      </div>
+    </div>
+  );
+};
+
+export default HVAC;
