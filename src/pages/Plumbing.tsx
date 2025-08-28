@@ -38,11 +38,6 @@ const Plumbing = () => {
     }
   ];
 
-  const additionalServices = [
-    "Commercial Plumbing Services in Redlands & the Inland Empire",
-    "Water Filtration Systems in Redlands, CA"
-  ];
-
   const trustBadges = [
     { icon: <Shield className="h-6 w-6 text-[#004078]" />, text: "Licensed" },
     { icon: <CheckCircle className="h-6 w-6 text-[#004078]" />, text: "Bonded" },
@@ -135,7 +130,7 @@ const Plumbing = () => {
                 (951) 904-6660
               </a>
             </Button>
-            <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-[#e23b19]">
+            <Button asChild size="lg" variant="outline" className="border-white hover:bg-white text-[#e23b19]">
               <Link to="/book-online">Book Online</Link>
             </Button>
           </div>
@@ -155,23 +150,6 @@ const Plumbing = () => {
             ))}
           </div>
         </div>
-
-        {/* Testimonial */}
-        <Card className="mb-16">
-          <CardContent className="p-8 text-center">
-            <div className="flex justify-center mb-4">
-              {[...Array(5)].map((_, i) => (
-                <Star key={i} className="h-5 w-5 text-[#f8a825] fill-current" />
-              ))}
-            </div>
-            <blockquote className="text-lg text-gray-600 mb-4">
-              "QuickPros saved our business when our main water line burst on a busy Saturday. They were there within an hour and had us back up and running by evening. Professional, fast, and reasonably priced!"
-            </blockquote>
-            <cite className="font-semibold text-[#004078]">
-              - Maria S., Restaurant Owner, Redlands, CA
-            </cite>
-          </CardContent>
-        </Card>
 
         {/* Local Keyword Text Block */}
         <div className="bg-gray-50 rounded-lg p-8">

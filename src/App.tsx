@@ -7,6 +7,8 @@ import BookOnline from './pages/BookOnline';
 import Plumbing from './pages/Plumbing';
 import HVAC from './pages/HVAC';
 import Coupons from './pages/Coupons';
+import React from 'react';
+import ScrollToTop from '@/components/ScrollToTop.tsx';
 
 function App() {
   return (
@@ -14,6 +16,7 @@ function App() {
       <div className="min-h-screen bg-white">
         <Header />
         <main>
+          <ScrollToTop />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/contact" element={<Contact />} />
@@ -22,6 +25,7 @@ function App() {
             <Route path="/hvac" element={<HVAC />} />
             <Route path="/coupons" element={<Coupons />} />
           </Routes>
+
         </main>
         <Footer />
       </div>
