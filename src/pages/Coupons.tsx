@@ -4,55 +4,14 @@ import { Button } from '../components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
 
 const Coupons = () => {
-  const coupons = [
-    {
-      icon: <Wrench className="h-8 w-8 text-[#f8a825]" />,
-      title: "$95 HVAC Maintenance Special",
-      description: "Complete system tune-up including filter replacement, coil cleaning, and performance check",
-      originalPrice: "$150",
-      savings: "$55",
-      finePrint: "Valid for residential customers only. Cannot be combined with other offers. Expires 60 days from print date."
-    },
-    {
-      icon: <DollarSign className="h-8 w-8 text-[#f8a825]" />,
-      title: "$50 Off Any Leak Repair",
-      description: "Professional leak detection and repair service for pipes, fixtures, and water lines",
-      originalPrice: "Regular Price",
-      savings: "$50",
-      finePrint: "Minimum service charge applies. Valid for leak repairs over $200. Cannot be combined with other offers."
-    },
-    {
-      icon: <Clock className="h-8 w-8 text-[#f8a825]" />,
-      title: "$100 Off After Hours HVAC Repair",
-      description: "Emergency HVAC service during evenings, weekends, and holidays",
-      originalPrice: "Emergency Rate",
-      savings: "$100",
-      finePrint: "Valid for after-hours service calls only (6PM-8AM, weekends, holidays). Minimum repair amount required."
-    },
-    {
-      icon: <Wrench className="h-8 w-8 text-[#f8a825]" />,
-      title: "$400 Off Whole Home Repipe",
-      description: "Complete home repiping service with modern PEX or copper piping",
-      originalPrice: "Regular Price",
-      savings: "$400",
-      finePrint: "Valid for whole-home repipe projects only. Cannot be combined with other offers. Financing available."
-    },
-    {
-      icon: <DollarSign className="h-8 w-8 text-[#f8a825]" />,
-      title: "$250 Off Tankless Water Heaters",
-      description: "Professional installation of energy-efficient tankless water heater systems",
-      originalPrice: "Regular Price",
-      savings: "$250",
-      finePrint: "Valid for new tankless water heater installations. Does not include unit cost. Professional installation required."
-    },
-    {
-      icon: <Scissors className="h-8 w-8 text-[#f8a825]" />,
-      title: "Free Service Call With Repair",
-      description: "No diagnostic fee when you choose QuickPros for your repair service",
-      originalPrice: "$89 Service Call",
-      savings: "$89",
-      finePrint: "Service call fee waived with completed repair. Diagnostic fee applies if repair is declined."
-    }
+
+  const couponImages = [
+    "quickpros_coupon_50_off_leak_repair.png",
+    "quickpros_coupon_95_hvac_maintenance.png",
+    "quickpros_coupon_100_off_after_hours_hvac.png",
+    "quickpros_coupon_250_off_tankless.png",
+    "quickpros_coupon_400_off_repipe.png",
+    "quickpros_coupon_free_service_call_with_repair.png"
   ];
 
   const handleShare = (couponTitle: string) => {
@@ -84,46 +43,19 @@ const Coupons = () => {
         </div>
 
         {/* Coupons Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {coupons.map((coupon, index) => (
-            <Card key={index} className="border-2 border-dashed border-[#e23b19] hover:shadow-lg transition-shadow">
-              <CardHeader className="bg-[#e23b19] text-white">
-                <CardTitle className="flex items-center text-xl">
-                  {coupon.icon}
-                  <span className="ml-3">{coupon.title}</span>
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="p-6">
-                <div className="text-center mb-4">
-                  <div className="text-3xl font-bold text-[#004078] mb-2">
-                    SAVE {coupon.savings}
-                  </div>
-                  {coupon.originalPrice !== "Regular Price" && coupon.originalPrice !== "Emergency Rate" && (
-                    <div className="text-gray-500 line-through">{coupon.originalPrice}</div>
-                  )}
-                </div>
-                
-                <p className="text-gray-600 mb-4 text-center">
-                  {coupon.description}
-                </p>
-                
-                <div className="border-t pt-4">
-                  <p className="text-xs text-gray-500 mb-4">
-                    <strong>Fine Print:</strong> {coupon.finePrint}
-                  </p>
-                  
-                  <Button
-                    onClick={() => handleShare(coupon.title)}
-                    variant="outline"
-                    size="sm"
-                    className="w-full text-[#004078] border-[#004078] hover:bg-[#004078] hover:text-white"
-                  >
-                    <Share2 className="h-4 w-4 mr-2" />
-                    Share This Coupon
-                  </Button>
-                </div>
-              </CardContent>
-            </Card>
+        <div
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
+          onClick={() => window.location.href = '/book-online'}
+          style={{ cursor: 'pointer' }}
+        >
+          {couponImages.map((src, index) => (
+            <div key={index} className="flex justify-center">
+              <img
+                src={`/coupons/${src}`}
+                alt={`Coupon ${index + 1}`}
+                className="max-w-full h-auto rounded-lg shadow-md"
+              />
+            </div>
           ))}
         </div>
 
@@ -161,7 +93,7 @@ const Coupons = () => {
               <Button asChild size="lg" className="bg-white text-[#004078] hover:bg-gray-100">
                 <Link to="/book-online">Book Online Now</Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-[#004078]">
+              <Button asChild size="lg" variant="outline" className="border-white bg-white text-[#004078]">
                 <a href="tel:9519046660">Call (951) 904-6660</a>
               </Button>
             </div>

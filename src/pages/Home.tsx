@@ -119,13 +119,13 @@ const Home = () => {
                 Serving Redlands, Highland, Yucaipa, San Bernardino & surrounding areas
               </p>
             </div>
-            <div className="text-center">
-              <img
-                  src="/logo.png"
-                alt="Bucky the Beaver - QuickPros Mascot" 
-                className="mx-auto max-w-sm w-full"
-              />
-            </div>
+          <div className="flex items-center justify-center h-full w-full">
+            <img
+              src="/van-taransparent.png"
+              alt="Bucky the Beaver - QuickPros Mascot"
+              className="object-contain h-full w-full"
+            />
+          </div>
           </div>
         </div>
       </section>
