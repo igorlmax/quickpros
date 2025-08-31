@@ -68,23 +68,35 @@ const Home = () => {
 
   const testimonials = [
     {
-      name: "Sarah M.",
+      Name: "Sarah M. — ",
       location: "Redlands, CA",
       rating: 5,
-      text: "QuickPros saved the day when our water heater failed on a Sunday morning. They were there within 2 hours and had us back up and running by afternoon. Excellent service!"
+      text: "QuickPros was amazing! Our AC stopped working on one of the hottest days this summer. The technician showed up on time, explained everything clearly, and had our system cooling again within an hour. Super professional and friendly service!"
     },
     {
-      name: "Mike R.",
-      location: "Highland, CA", 
-      rating: 5,
-      text: "Professional, courteous, and fair pricing. They fixed our AC right before the summer heat wave. I'll definitely call them again for any HVAC needs."
-    },
-    {
-      name: "Jennifer L.",
+      name: "James L.",
       location: "Yucaipa, CA",
       rating: 5,
-      text: "The team at QuickPros is fantastic. They explained everything clearly and completed the plumbing repair quickly. True professionals who care about their customers."
-    }
+      text: "I had a water heater issue and QuickPros came out the same day. Fair pricing, no hidden fees, and they treated my home with respect. I’ve already signed up for their maintenance plan because I trust them."
+    },
+    {
+      name: "Maria G.",
+      location: "Highland, CA", 
+      rating: 5,
+      text: "From the first call to the job completion, the QuickPros team was courteous, knowledgeable, and efficient. They fixed a stubborn drain problem that other companies couldn’t. Highly recommend!"
+    },
+    {
+      name: "David R.",
+      location: "Loma Linda, CA",
+      rating: 5,
+      text: "QuickPros Plumbing & Air really impressed me. The technician explained my options for a new system without pressure, and the installation went smoothly. Great family-owned company!"
+    },
+    {
+      name: "Amanda K.",
+      location: "San Bernardino, CA",
+      rating: 5,
+      text: "Professional, fast, and affordable! QuickPros replaced a broken pipe in our home and even cleaned up afterward. It’s rare to find a company that goes the extra mile like this."
+    },
   ];
 
   return (
