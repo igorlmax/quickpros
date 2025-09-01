@@ -15,6 +15,7 @@ const Header = () => {
               src="/logo.png"
               alt="Bucky the Beaver - QuickPros Mascot" 
               className="h-12 w-12 mr-3"
+              loading="lazy"
             />
             <div>
               <h1 className="text-2xl font-bold text-[#004078]">QuickPros</h1>

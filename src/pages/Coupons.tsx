@@ -54,6 +54,7 @@ const Coupons = () => {
                 src={`/coupons/${src}`}
                 alt={`Coupon ${index + 1}`}
                 className="max-w-full h-auto rounded-lg shadow-md"
+                loading="lazy"
               />
             </div>
           ))}

@@ -99,6 +99,7 @@ const Home = () => {
     },
   ];
 
+  // @ts-ignore
   return (
     <div>
       {/* Hero Section */}
@@ -136,6 +137,7 @@ const Home = () => {
               src="/van-taransparent.png"
               alt="Bucky the Beaver - QuickPros Mascot"
               className="object-contain h-full w-full"
+              loading="lazy"
             />
           </div>
           </div>
@@ -208,21 +210,24 @@ const Home = () => {
             </h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* @ts-ignore */}
+            <div locationId="11568939440904783508" className="review-widget-carousel"></div>
+            <hr/>
             {testimonials.map((testimonial, index) => (
-              <Card key={index}>
-                <CardContent className="p-6">
-                  <div className="flex mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="h-5 w-5 text-[#f8a825] fill-current" />
-                    ))}
-                  </div>
-                  <p className="text-gray-600 mb-4">"{testimonial.text}"</p>
-                  <div>
-                    <p className="font-semibold text-[#004078]">{testimonial.name}</p>
-                    <p className="text-sm text-gray-500">{testimonial.location}</p>
-                  </div>
-                </CardContent>
-              </Card>
+                <Card key={index}>
+                  <CardContent className="p-6">
+                    <div className="flex mb-4">
+                      {[...Array(testimonial.rating)].map((_, i) => (
+                          <Star key={i} className="h-5 w-5 text-[#f8a825] fill-current"/>
+                      ))}
+                    </div>
+                    <p className="text-gray-600 mb-4">"{testimonial.text}"</p>
+                    <div>
+                      <p className="font-semibold text-[#004078]">{testimonial.name}</p>
+                      <p className="text-sm text-gray-500">{testimonial.location}</p>
+                    </div>
+                  </CardContent>
+                </Card>
             ))}
           </div>
         </div>

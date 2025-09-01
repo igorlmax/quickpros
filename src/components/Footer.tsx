@@ -17,6 +17,8 @@ const Footer = () => {
                   src="/logo.png"
                 alt="QuickPros Logo" 
                 className="h-10 w-10 mr-3"
+                  loading="lazy"
+
               />
               <div>
                 <h3 className="text-xl font-bold">QuickPros</h3>

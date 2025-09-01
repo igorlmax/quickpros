@@ -136,6 +136,35 @@ const Plumbing = () => {
           </div>
         </div>
 
+        {/* Our Services Gallery */}
+        <div className="mb-16">
+          <h2 className="text-2xl font-bold text-[#004078] text-center mb-8">Our Services</h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {[
+              'hvac1.jpg',
+              'hvac2.jpg',
+              'hvac3.jpg',
+              'hvac5.jpg',
+              'hvac6.jpg',
+              'Plumbing1.jpg',
+              'Plumbing2.jpg',
+              'Plumbing3.jpg'
+            ].map((img, idx) => (
+                <div key={idx} className="rounded-lg overflow-hidden shadow hover:shadow-lg transition-shadow bg-white">
+                  <img
+                      src={`/services/${img}`}
+                      alt={img.replace(/[-_]/g, ' ').replace('.jpg', '').replace('.png', '')}
+                      className="w-full h-40 object-cover"
+                      loading="lazy"
+                  />
+                  <div className="text-center text-sm font-medium text-[#004078]">
+
+                  </div>
+                </div>
+            ))}
+          </div>
+        </div>
+
         {/* Trust Badges */}
         <div className="mb-16">
           <h2 className="text-2xl font-bold text-[#004078] text-center mb-8">Why Choose QuickPros?</h2>
@@ -171,6 +200,10 @@ const Plumbing = () => {
             </div>
           </div>
         </div>
+
+
+
+
       </div>
     </div>
   );
