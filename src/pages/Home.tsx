@@ -108,38 +108,41 @@ const Home = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Fast. Friendly. Family-Owned.
+                Professional Plumbing & HVAC Services
               </h1>
-              <p className="text-xl md:text-2xl mb-4 text-[#f8a825]">
-                That's the QuickPros Way!
+              <p className="text-xl md:text-2xl mb-6 text-[#f8a825]">
+                Redlands & Inland Empire's Trusted Home Comfort Experts
               </p>
               <p className="text-lg mb-8 text-gray-200">
-                Professional plumbing and HVAC services for Redlands and the Inland Empire. 
-                Licensed, insured, and ready to serve you 24/7.
+                Licensed, insured, and family-owned. We provide fast, reliable service for all your plumbing and HVAC
+                needs with transparent pricing and same-day appointments.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 mb-8">
+              <div className="flex flex-col sm:flex-row gap-4 mb-8 items-center">
                 <Button asChild size="lg" className="bg-[#e23b19] hover:bg-[#e23b19]/90 text-lg px-8">
                   <Link to="/book-online">Book Service Now</Link>
                 </Button>
-                <Button asChild variant="outline" size="lg" className="text-[#004078] border-white hover:bg-white/90 hover:text-[#004078] text-lg px-8">
+                <Button asChild variant="outline" size="lg"
+                        className="text-[#004078] border-white hover:bg-white/90 hover:text-[#004078] text-lg px-8">
                   <a href="tel:9519046660">
-                    <Phone className="h-5 w-5 mr-2" />
+                    <Phone className="h-5 w-5 mr-2"/>
                     (951) 904-6660
                   </a>
                 </Button>
+         <img src="/Owned-Badge.png" alt="QuickPros Logo" className="h-26 w-auto mr-4 h-full sm:w-auto sm:h-26" loading="lazy"/>
+
               </div>
               <p className="text-sm text-gray-300">
                 Serving Redlands, Highland, Yucaipa, San Bernardino & surrounding areas
               </p>
             </div>
-          <div className="flex items-center justify-center h-full w-full">
-            <img
-              src="/van-taransparent.png"
-              alt="Bucky the Beaver - QuickPros Mascot"
-              className="object-contain h-full w-full"
-              loading="lazy"
-            />
-          </div>
+            <div className="flex items-center justify-center h-full w-full">
+              <img
+                  src="/van-taransparent.png"
+                  alt="Bucky the Beaver - QuickPros Mascot"
+                  className="object-contain h-full w-full"
+                  loading="lazy"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -148,7 +151,7 @@ const Home = () => {
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#004078] mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-[#004078] mb-4">
               Our Expert Services
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -209,10 +212,11 @@ const Home = () => {
               What Our Customers Say
             </h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div>
             {/* @ts-ignore */}
             <div locationId="11568939440904783508" className="review-widget-carousel"></div>
-            <hr/>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
                 <Card key={index}>
                   <CardContent className="p-6">
@@ -236,7 +240,7 @@ const Home = () => {
       {/* CTA Banner */}
       <section className="py-12 bg-[#e23b19]">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
+        <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
             Schedule Online & Save $25!
           </h2>
           <p className="text-white/90 mb-6 text-lg">

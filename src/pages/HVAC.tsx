@@ -62,8 +62,8 @@ const HVAC = () => {
 
         {/* Hero Image with Bucky */}
         <div className="text-center mb-16">
-          <img 
-            src="/logo.jpg"
+          <img
+            src="/logo.png"
             alt="Bucky the Beaver with HVAC Tools" 
             className="mx-auto max-w-md w-full rounded-lg"
           />
