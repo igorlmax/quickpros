@@ -9,6 +9,7 @@ import HVAC from './pages/HVAC';
 import Coupons from './pages/Coupons';
 import React from 'react';
 import ScrollToTop from '@/components/ScrollToTop.tsx';
+import Funnel from '@/pages/Funnel.tsx';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <ScrollToTop />
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/funnel" element={<Funnel />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/book-online" element={<BookOnline />} />
             <Route path="/plumbing" element={<Plumbing />} />
