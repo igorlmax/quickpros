@@ -1,3 +1,4 @@
 User-agent: *
-Disallow: /private/
-Allow: /
+Disallow:
+
+Sitemap: https://www.quickpros.com/sitemap.xml
