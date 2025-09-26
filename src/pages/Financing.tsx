@@ -107,7 +107,7 @@ const Financing = () => {
                         <Button asChild size="lg" className="bg-[#f8a825] hover:bg-[#e89c1a] text-xl py-4 px-8 text-[#1a2636] font-bold shadow-md">
                             <a href="https://apply.sunbit.com/QUICKPROSPlumbingAir" target="_blank" rel="noopener noreferrer">
                                 <CreditCard className="h-6 w-6 mr-3" />
-                                See if You Pre-Qualify
+                                Get Qualified Now
                             </a>
                         </Button>
                     </div>

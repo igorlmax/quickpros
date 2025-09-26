@@ -103,7 +103,7 @@ const Home = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-[#00589f] to-[#004078] text-white py-20">
+      <section className="bg-gradient-to-r from-[#00589f] to-[#004078] text-white py-8 lg:py-20">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -117,36 +117,53 @@ const Home = () => {
                 Licensed, insured, and family-owned. We provide fast, reliable service for all your plumbing and HVAC
                 needs with transparent pricing and same-day appointments.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 mb-8 items-center">
-                <Button asChild size="lg" className="bg-[#e23b19] hover:bg-[#e23b19]/90 text-lg px-8">
-                  <Link to="/book-online">Book Service Now</Link>
+
+              <div
+                  className="flex flex-col sm:flex-row gap-3 sm:gap-2 mb-8 w-full items-stretch sm:items-center justify-center sm:justify-start">
+                <Button
+                    asChild
+                    size="lg"
+                    className="bg-[#e23b19] hover:bg-[#e23b19]/90 text-lg px-8 w-full sm:w-auto"
+                >
+                  <Link to="/book-online" className="w-full flex justify-center sm:justify-start">Book Service
+                    Now</Link>
                 </Button>
 
+                <Button
+                    asChild
+                    variant="ghost"
+                    size="lg"
+                    className="bg-[#f8a825] hover:bg-[#f8a825]/90 text-[#004078] font-semibold text-lg px-8 w-full sm:w-auto flex items-center justify-center"
+                >
+                  <Link to="/financing" className="flex items-center w-full justify-center sm:justify-start">
+                    <div className="flex items-center bg-white rounded-full h-8 w-8 mr-3 justify-center">
+                      <svg className="h-5 w-5 text-[#004078]" fill="none" stroke="currentColor" strokeWidth="2"
+                           viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7"/>
+                      </svg>
+                    </div>
+                    <span>Financing <span className="lg:hidden">available</span></span>
+                  </Link>
+                </Button>
 
-             <Link to="/financing" className="flex justify-center w-full">
-               <div className="flex items-center bg-[#f8a825] rounded-lg px-4 py-2 shadow-md">
-                 <div className="flex items-center justify-center bg-white rounded-full h-8 w-8 mr-3">
-                   <svg className="h-5 w-5 text-[#004078]" fill="none" stroke="currentColor" strokeWidth="2"
-                        viewBox="0 0 24 24">
-                     <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7"/>
-                   </svg>
-                 </div>
-                 <span className="text-[#004078] font-semibold text-lg">Financing available</span>
-               </div>
-             </Link>
-
-                <img src="/Owned-Badge.png" alt="QuickPros Logo" className="h-26 w-auto mr-4 h-full sm:w-auto sm:h-26"
-                     loading="lazy"/>
-
-                <Button asChild variant="outline" size="lg"
-                        className="text-[#004078] border-white hover:bg-white/90 hover:text-[#004078] text-lg px-8">
-                  <a href="tel:9519046660">
+                <Button
+                    asChild
+                    variant="outline"
+                    size="lg"
+                    className="text-[#004078] border-white hover:bg-white/90 hover:text-[#004078] text-lg px-8 w-full sm:w-auto flex items-center justify-center"
+                >
+                  <a href="tel:9519046660" className="flex items-center w-full justify-center sm:justify-start">
                     <Phone className="h-5 w-5 mr-2"/>
                     (951) 904-6660
                   </a>
                 </Button>
 
+                <div className="flex justify-center sm:justify-start w-full sm:w-auto">
+                  <img src="/Owned-Badge.png" alt="QuickPros Logo" className="h-full lg:h-20 w-auto" loading="lazy"/>
+                </div>
               </div>
+
+
               <p className="text-sm text-gray-300">
                 Serving Redlands, Highland, Yucaipa, San Bernardino & surrounding areas
               </p>
@@ -167,24 +184,24 @@ const Home = () => {
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#004078] mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#004078] mb-4">
               Our Expert Services
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              From emergency repairs to routine maintenance, QuickPros has the expertise 
+              From emergency repairs to routine maintenance, QuickPros has the expertise
               to keep your home comfortable year-round.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <Card key={index} className="hover:shadow-lg transition-shadow">
-                <CardContent className="p-6">
-                  <div className="mb-4">{service.icon}</div>
-                  <h3 className="text-xl font-semibold text-[#004078] mb-3">{service.title}</h3>
-                  <p className="text-gray-600 mb-4">{service.description}</p>
-                  <p className="text-sm text-gray-500">{service.details}</p>
-                </CardContent>
-              </Card>
+                <Card key={index} className="hover:shadow-lg transition-shadow">
+                  <CardContent className="p-6">
+                    <div className="mb-4">{service.icon}</div>
+                    <h3 className="text-xl font-semibold text-[#004078] mb-3">{service.title}</h3>
+                    <p className="text-gray-600 mb-4">{service.description}</p>
+                    <p className="text-sm text-gray-500">{service.details}</p>
+                  </CardContent>
+                </Card>
             ))}
           </div>
         </div>
@@ -198,7 +215,7 @@ const Home = () => {
               Why Choose QuickPros?
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Choosing QuickPros means choosing peace of mind. We combine professional expertise 
+              Choosing QuickPros means choosing peace of mind. We combine professional expertise
               with family values to give you honest service, upfront pricing, and lasting solutions.
             </p>
           </div>
