@@ -137,18 +137,19 @@ const Contact = () => {
               */}
 
               <div className="bg-gray-50 rounded-lg p-6 mt-8 shadow-inner">
-                              <h3 className="text-xl font-semibold text-[#004078] mb-2">Why Contact Us?</h3>
-                              <ul className="list-disc list-inside text-gray-700 space-y-1">
-                                <li>Fast response times for all service requests</li>
-                                <li>Licensed and experienced technicians</li>
-                                <li>Upfront, honest pricing</li>
-                                <li>Comprehensive plumbing and HVAC solutions</li>
-                                <li>Emergency services available 24/7</li>
-                              </ul>
-                              <p className="mt-4 text-gray-600">
-                                Our team is ready to answer your questions and provide the help you need. Reach out today and experience our commitment to quality service!
-                              </p>
-                            </div>
+                <h3 className="text-xl font-semibold text-[#004078] mb-2">Why Contact Us?</h3>
+                <ul className="list-disc list-inside text-gray-700 space-y-1">
+                  <li>Fast response times for all service requests</li>
+                  <li>Licensed and experienced technicians</li>
+                  <li>Upfront, honest pricing</li>
+                  <li>Comprehensive plumbing and HVAC solutions</li>
+                  <li>Emergency services available 24/7</li>
+                </ul>
+                <p className="mt-4 text-gray-600">
+                  Our team is ready to answer your questions and provide the help you need. Reach out today and
+                  experience our commitment to quality service!
+                </p>
+              </div>
             </CardContent>
           </Card>
 
@@ -227,6 +228,7 @@ const Contact = () => {
         </div>
 
         {/* Map Embed */}
+        {/*
         <div className="mt-16">
           <h2 className="text-2xl font-bold text-[#004078] mb-6 text-center">Find Us</h2>
           <div className="bg-gray-200 rounded-lg h-96 flex items-center justify-center">
@@ -246,6 +248,25 @@ const Contact = () => {
             </div>
           </div>
         </div>
+        */}
+
+        <div className="mt-16">
+          <h2 className="text-2xl font-bold text-[#004078] mb-6 text-center">Find Us</h2>
+          <div className="bg-gray-200 rounded-lg h-96 flex items-center justify-center">
+            <iframe
+                title="Google Map"
+                width="100%"
+                height="100%"
+                className="rounded-lg border-0 w-full h-96"
+                style={{ minHeight: 424 }}
+                loading="lazy"
+                allowFullScreen
+                referrerPolicy="no-referrer-when-downgrade"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3593.740120612416!2d-117.18471839999998!3d34.059768399999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dcaa72a4927d9f%3A0xfe64ebe2a3ee4c32!2s100%20W%20Stuart%20Ave%2C%20Redlands%2C%20CA%2092374%2C%20USA!5e1!3m2!1sen!2sch!4v1758899356594!5m2!1sen!2sch"
+            />
+          </div>
+        </div>
+
       </div>
     </div>
   );

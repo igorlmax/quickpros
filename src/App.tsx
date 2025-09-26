@@ -10,6 +10,7 @@ import Coupons from './pages/Coupons';
 import React from 'react';
 import ScrollToTop from '@/components/ScrollToTop.tsx';
 import Funnel from '@/pages/Funnel.tsx';
+import Financing from '@/pages/Financing.tsx';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/funnel" element={<Funnel />} />
+            <Route path="/financing" element={<Financing />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/book-online" element={<BookOnline />} />
             <Route path="/plumbing" element={<Plumbing />} />

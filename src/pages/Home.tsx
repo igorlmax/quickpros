@@ -121,6 +121,23 @@ const Home = () => {
                 <Button asChild size="lg" className="bg-[#e23b19] hover:bg-[#e23b19]/90 text-lg px-8">
                   <Link to="/book-online">Book Service Now</Link>
                 </Button>
+
+
+             <Link to="/financing" className="flex justify-center w-full">
+               <div className="flex items-center bg-[#f8a825] rounded-lg px-4 py-2 shadow-md">
+                 <div className="flex items-center justify-center bg-white rounded-full h-8 w-8 mr-3">
+                   <svg className="h-5 w-5 text-[#004078]" fill="none" stroke="currentColor" strokeWidth="2"
+                        viewBox="0 0 24 24">
+                     <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7"/>
+                   </svg>
+                 </div>
+                 <span className="text-[#004078] font-semibold text-lg">Financing available</span>
+               </div>
+             </Link>
+
+                <img src="/Owned-Badge.png" alt="QuickPros Logo" className="h-26 w-auto mr-4 h-full sm:w-auto sm:h-26"
+                     loading="lazy"/>
+
                 <Button asChild variant="outline" size="lg"
                         className="text-[#004078] border-white hover:bg-white/90 hover:text-[#004078] text-lg px-8">
                   <a href="tel:9519046660">
@@ -128,7 +145,6 @@ const Home = () => {
                     (951) 904-6660
                   </a>
                 </Button>
-         <img src="/Owned-Badge.png" alt="QuickPros Logo" className="h-26 w-auto mr-4 h-full sm:w-auto sm:h-26" loading="lazy"/>
 
               </div>
               <p className="text-sm text-gray-300">

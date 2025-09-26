@@ -28,6 +28,7 @@ const Header = () => {
             <Link to="/plumbing" className="text-[#004078] hover:text-[#e23b19] font-medium">Plumbing</Link>
             <Link to="/hvac" className="text-[#004078] hover:text-[#e23b19] font-medium">HVAC</Link>
             <Link to="/coupons" className="text-[#004078] hover:text-[#e23b19] font-medium">Coupons</Link>
+            <Link to="/financing" className="text-[#004078] hover:text-[#e23b19] font-medium">Financing</Link>
             <Link to="/contact" className="text-[#004078] hover:text-[#e23b19] font-medium">Contact</Link>
           </nav>
 
