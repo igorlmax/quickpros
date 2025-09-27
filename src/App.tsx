@@ -11,6 +11,7 @@ import React from 'react';
 import ScrollToTop from '@/components/ScrollToTop.tsx';
 import Funnel from '@/pages/Funnel.tsx';
 import Financing from '@/pages/Financing.tsx';
+import Faq from '@/pages/Faq.tsx';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/book-online" element={<BookOnline />} />
             <Route path="/plumbing" element={<Plumbing />} />
+            <Route path="/faq" element={<Faq />} />
             <Route path="/hvac" element={<HVAC />} />
             <Route path="/coupons" element={<Coupons />} />
           </Routes>

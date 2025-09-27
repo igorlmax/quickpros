@@ -29,6 +29,7 @@ const Header = () => {
             <Link to="/hvac" className="text-[#004078] hover:text-[#e23b19] font-medium">HVAC</Link>
             <Link to="/coupons" className="text-[#004078] hover:text-[#e23b19] font-medium">Coupons</Link>
             <Link to="/financing" className="text-[#004078] hover:text-[#e23b19] font-medium">Financing</Link>
+            <Link to="/faq" className="text-[#004078] hover:text-[#e23b19] font-medium">FAQ</Link>
             <Link to="/contact" className="text-[#004078] hover:text-[#e23b19] font-medium">Contact</Link>
           </nav>
 
@@ -56,7 +57,9 @@ const Header = () => {
               <Link to="/" className="text-[#004078] hover:text-[#e23b19] font-medium">Home</Link>
               <Link to="/plumbing" className="text-[#004078] hover:text-[#e23b19] font-medium">Plumbing</Link>
               <Link to="/hvac" className="text-[#004078] hover:text-[#e23b19] font-medium">HVAC</Link>
+              <Link to="/financing" className="text-[#004078] hover:text-[#e23b19] font-medium">Financing</Link>
               <Link to="/coupons" className="text-[#004078] hover:text-[#e23b19] font-medium">Coupons</Link>
+              <Link to="/faq" className="text-[#004078] hover:text-[#e23b19] font-medium">FAQ</Link>
               <Link to="/contact" className="text-[#004078] hover:text-[#e23b19] font-medium">Contact</Link>
               <a href="tel:9519046660" className="flex items-center text-[#004078] hover:text-[#e23b19]">
                 <Phone className="h-4 w-4 mr-2" />

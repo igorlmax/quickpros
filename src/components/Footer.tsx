@@ -70,6 +70,8 @@ const Footer = () => {
               <li><Link to="/book-online" className="text-gray-300 hover:text-[#f8a825]">Book Online</Link></li>
               <li><Link to="/coupons" className="text-gray-300 hover:text-[#f8a825]">Current Specials</Link></li>
               <li><Link to="/financing" className="text-gray-300 hover:text-[#f8a825]">Financing</Link></li>
+              <li><Link to="/coupons" className="text-gray-300 hover:text-[#f8a825]">Coupons</Link></li>
+              <li><Link to="/faq" className="text-gray-300 hover:text-[#f8a825]">FAQ</Link></li>
               <li><Link to="/contact" className="text-gray-300 hover:text-[#f8a825]">Contact Us</Link></li>
               <li><a href="tel:9519046660" className="text-[#e23b19] hover:text-[#f8a825] font-semibold">Emergency Service</a></li>
             </ul>
