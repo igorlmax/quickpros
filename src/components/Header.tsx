@@ -53,22 +53,22 @@ const Header = () => {
 
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t">
-            <nav className="flex flex-col space-y-4">
-              <Link to="/" className="text-[#004078] hover:text-[#e23b19] font-medium">Home</Link>
-              <Link to="/plumbing" className="text-[#004078] hover:text-[#e23b19] font-medium">Plumbing</Link>
-              <Link to="/hvac" className="text-[#004078] hover:text-[#e23b19] font-medium">HVAC</Link>
-              <Link to="/financing" className="text-[#004078] hover:text-[#e23b19] font-medium">Financing</Link>
-              <Link to="/coupons" className="text-[#004078] hover:text-[#e23b19] font-medium">Coupons</Link>
-              <Link to="/faq" className="text-[#004078] hover:text-[#e23b19] font-medium">FAQ</Link>
-              <Link to="/contact" className="text-[#004078] hover:text-[#e23b19] font-medium">Contact</Link>
-              <a href="tel:9519046660" className="flex items-center text-[#004078] hover:text-[#e23b19]">
-                <Phone className="h-4 w-4 mr-2" />
-                <span className="font-semibold">(951) 904-6660</span>
-              </a>
-              <Button asChild className="bg-[#e23b19] hover:bg-[#e23b19]/90 w-fit">
-                <Link to="/book-online">Book Service Now</Link>
-              </Button>
-            </nav>
+          <nav className="flex flex-col space-y-4">
+            <Link to="/" className="text-[#004078] hover:text-[#e23b19] font-medium" onClick={() => setIsMenuOpen(false)}>Home</Link>
+            <Link to="/plumbing" className="text-[#004078] hover:text-[#e23b19] font-medium" onClick={() => setIsMenuOpen(false)}>Plumbing</Link>
+            <Link to="/hvac" className="text-[#004078] hover:text-[#e23b19] font-medium" onClick={() => setIsMenuOpen(false)}>HVAC</Link>
+            <Link to="/financing" className="text-[#004078] hover:text-[#e23b19] font-medium" onClick={() => setIsMenuOpen(false)}>Financing</Link>
+            <Link to="/coupons" className="text-[#004078] hover:text-[#e23b19] font-medium" onClick={() => setIsMenuOpen(false)}>Coupons</Link>
+            <Link to="/faq" className="text-[#004078] hover:text-[#e23b19] font-medium" onClick={() => setIsMenuOpen(false)}>FAQ</Link>
+            <Link to="/contact" className="text-[#004078] hover:text-[#e23b19] font-medium" onClick={() => setIsMenuOpen(false)}>Contact</Link>
+            <a href="tel:9519046660" className="flex items-center text-[#004078] hover:text-[#e23b19]" onClick={() => setIsMenuOpen(false)}>
+              <Phone className="h-4 w-4 mr-2" />
+              <span className="font-semibold">(951) 904-6660</span>
+            </a>
+            <Button asChild className="bg-[#e23b19] hover:bg-[#e23b19]/90 w-fit">
+              <Link to="/book-online" onClick={() => setIsMenuOpen(false)}>Book Service Now</Link>
+            </Button>
+          </nav>
           </div>
         )}
       </div>
