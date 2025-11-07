@@ -182,8 +182,19 @@ const Contact = () => {
                         rel="noopener noreferrer"
                         className="text-gray-600 hover:text-[#e23b19]"
                     >
-                      100 W. Stuart Ave.<br/>
+                      1255 w Colton ave.<br/>
                       Redlands, CA 92374
+                    </a>
+                    <br/>
+                    <br/>
+                    <a
+                        href="https://maps.google.com/?q=100+W.+Stuart+Ave.,+Redlands,+CA+92374"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-gray-600 hover:text-[#e23b19]"
+                    >
+                      33075 Yucaipa Blvd.<br/>
+                      Yucaipa, CA 92399
                     </a>
                   </div>
                 </div>
@@ -262,7 +273,7 @@ const Contact = () => {
                 loading="lazy"
                 allowFullScreen
                 referrerPolicy="no-referrer-when-downgrade"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3593.740120612416!2d-117.18471839999998!3d34.059768399999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dcaa72a4927d9f%3A0xfe64ebe2a3ee4c32!2s100%20W%20Stuart%20Ave%2C%20Redlands%2C%20CA%2092374%2C%20USA!5e1!3m2!1sen!2sch!4v1758899356594!5m2!1sen!2sch"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6808.555740007674!2d-117.20433038874742!3d34.06204661710083!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dcaa4399844dcb%3A0x71cc122837cd0b88!2s1255%20W%20Colton%20Ave%2C%20Redlands%2C%20CA%2092374%2C%20USA!5e1!3m2!1sen!2sch!4v1759097454777!5m2!1sen!2sch"
             />
           </div>
         </div>

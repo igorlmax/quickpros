@@ -247,7 +247,7 @@ const Home = () => {
           </div>
           <div>
             {/* @ts-ignore */}
-            <div locationId="11568939440904783508" className="review-widget-carousel"></div>
+            <div locationid="11568939440904783508" className="review-widget-carousel"></div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (

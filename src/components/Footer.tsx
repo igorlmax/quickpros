@@ -45,20 +45,27 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-4">Contact Info</h4>
             <div className="space-y-3">
               <div className="flex items-center">
-                <Phone className="h-4 w-4 mr-2 text-[#f8a825]" />
+                <Phone className="h-4 w-4 mr-2 text-[#f8a825]"/>
                 <a href="tel:9519046660" className="text-gray-300 hover:text-[#f8a825]">
                   (951) 904-6660
                 </a>
               </div>
               <div className="flex items-start">
-                <MapPin className="h-4 w-4 mr-2 text-[#f8a825] mt-1" />
+                <MapPin className="h-4 w-4 mr-2 text-[#f8a825] mt-1"/>
                 <div className="text-gray-300">
-                  100 W. Stuart Ave.<br />
+                  1255 w Colton ave.<br/>
                   Redlands, CA 92374
                 </div>
               </div>
+              <div className="flex items-start">
+                <MapPin className="h-4 w-4 mr-2 text-[#f8a825] mt-1"/>
+                <div className="text-gray-300">
+                  33075 Yucaipa Blvd.<br/>
+                  Yucaipa, CA 92399
+                </div>
+              </div>
               <div className="flex items-center">
-                <Clock className="h-4 w-4 mr-2 text-[#f8a825]" />
+                <Clock className="h-4 w-4 mr-2 text-[#f8a825]"/>
                 <span className="text-gray-300">24/7 Emergency Service</span>
               </div>
             </div>

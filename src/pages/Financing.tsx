@@ -105,9 +105,14 @@ const Financing = () => {
                     </p>
                     <div className="mb-6">
                         <Button asChild size="lg" className="bg-[#f8a825] hover:bg-[#e89c1a] text-xl py-4 px-8 text-[#1a2636] font-bold shadow-md">
-                            <a href="https://apply.sunbit.com/QUICKPROSPlumbingAir" target="_blank" rel="noopener noreferrer">
-                                <CreditCard className="h-6 w-6 mr-3" />
-                                See if You Pre-Qualify
+                            <a
+                                href="https://www.mysynchrony.com/mmc/HY238851700"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex items-center justify-center gap-3 text-[1rem] md:text-xl"
+                            >
+                                <img src="/2023_synchrony_basic_logo.svg" alt="Synchrony Logo" className="h-6 md:h-7" />
+                                Pre-Qualify Now
                             </a>
                         </Button>
                     </div>
@@ -256,9 +261,14 @@ const Financing = () => {
                         Get the service you need today and pay over time. Your family's comfort shouldn't wait for your budget.
                     </p>
                     <div className="space-y-4">
-                        <Button asChild size="lg" className="bg-white text-[#e23b19] hover:bg-gray-100 text-xl py-4 px-8">
-                            <a href="https://apply.sunbit.com/QUICKPROSPlumbingAir" target="_blank" rel="noopener noreferrer">
-                                <CreditCard className="h-6 w-6 mr-3" />
+                        <Button asChild size="lg" className="bg-white hover:bg-white text-xl py-4 px-8 text-[#1a2636] font-bold shadow-md">
+                            <a
+                                href="https://www.mysynchrony.com/mmc/HY238851700"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex items-center justify-center gap-3 text-[1rem] md:text-xl"
+                            >
+                                <img src="/2023_synchrony_basic_logo.svg" alt="Synchrony Logo" className="h-6 md:h-7" />
                                 Pre-Qualify Now
                             </a>
                         </Button>
