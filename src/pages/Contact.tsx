@@ -46,13 +46,13 @@ const Contact = () => {
               <CardTitle className="text-2xl text-[#004078]">Send Us a Message</CardTitle>
             </CardHeader>
             <CardContent>
-              <iframe
-                  src="https://st.sendajob.com/MY/servicerequest/d82d54387f73c8d1762b557058d5aec309b09ace_f.html"
-                  className="w-full mb-8 rounded"
-                  style={{ minHeight: 400, border: 'none', overflow: 'hidden' }}
-                  title="Service Request Form"
-                  scrolling="no"
-              />
+              {/*<iframe*/}
+              {/*    src="https://st.sendajob.com/MY/servicerequest/d82d54387f73c8d1762b557058d5aec309b09ace_f.html"*/}
+              {/*    className="w-full mb-8 rounded"*/}
+              {/*    style={{ minHeight: 400, border: 'none', overflow: 'hidden' }}*/}
+              {/*    title="Service Request Form"*/}
+              {/*    scrolling="no"*/}
+              {/*/>*/}
 
               {/*
               <form onSubmit={handleSubmit} className="space-y-6">
@@ -264,17 +264,17 @@ const Contact = () => {
         <div className="mt-16">
           <h2 className="text-2xl font-bold text-[#004078] mb-6 text-center">Find Us</h2>
           <div className="bg-gray-200 rounded-lg h-96 flex items-center justify-center">
-            <iframe
-                title="Google Map"
-                width="100%"
-                height="100%"
-                className="rounded-lg border-0 w-full h-96"
-                style={{ minHeight: 424 }}
-                loading="lazy"
-                allowFullScreen
-                referrerPolicy="no-referrer-when-downgrade"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6808.555740007674!2d-117.20433038874742!3d34.06204661710083!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dcaa4399844dcb%3A0x71cc122837cd0b88!2s1255%20W%20Colton%20Ave%2C%20Redlands%2C%20CA%2092374%2C%20USA!5e1!3m2!1sen!2sch!4v1759097454777!5m2!1sen!2sch"
-            />
+            {/*<iframe*/}
+            {/*    title="Google Map"*/}
+            {/*    width="100%"*/}
+            {/*    height="100%"*/}
+            {/*    className="rounded-lg border-0 w-full h-96"*/}
+            {/*    style={{ minHeight: 424 }}*/}
+            {/*    loading="lazy"*/}
+            {/*    allowFullScreen*/}
+            {/*    referrerPolicy="no-referrer-when-downgrade"*/}
+            {/*    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6808.555740007674!2d-117.20433038874742!3d34.06204661710083!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dcaa4399844dcb%3A0x71cc122837cd0b88!2s1255%20W%20Colton%20Ave%2C%20Redlands%2C%20CA%2092374%2C%20USA!5e1!3m2!1sen!2sch!4v1759097454777!5m2!1sen!2sch"*/}
+            {/*/>*/}
           </div>
         </div>
 

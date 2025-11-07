@@ -73,15 +73,15 @@ const BookOnline = () => {
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <iframe
-                    src="https://online-booking.workiz.com/?ac=8f69dba504122e8e9c9a0fcfd2598fcab646d9a9b1a6fb21bf771588cec13a4f"
-                    title="Online Booking"
-                    width="100%"
-                    height="800"
-                    frameBorder="0"
-                    allowFullScreen
-                    className="w-full rounded-lg shadow-lg"
-                ></iframe>
+                {/*<iframe*/}
+                {/*    src="https://online-booking.workiz.com/?ac=8f69dba504122e8e9c9a0fcfd2598fcab646d9a9b1a6fb21bf771588cec13a4f"*/}
+                {/*    title="Online Booking"*/}
+                {/*    width="100%"*/}
+                {/*    height="800"*/}
+                {/*    frameBorder="0"*/}
+                {/*    allowFullScreen*/}
+                {/*    className="w-full rounded-lg shadow-lg"*/}
+                {/*></iframe>*/}
               </CardContent>
             </Card>
           </div>
