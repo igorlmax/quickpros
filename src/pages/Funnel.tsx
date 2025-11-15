@@ -1,9 +1,18 @@
 import { useState } from 'react';
-import { Phone, Star, Shield, CreditCard, CheckCircle, ArrowRight, MessageSquare, AlertCircle, Users } from 'lucide-react';
+import {
+    AlertCircle,
+    ArrowRight,
+    CheckCircle,
+    CreditCard,
+    MessageSquare,
+    Phone,
+    Shield,
+    Star,
+    Users
+} from 'lucide-react';
 import { Button } from '../components/ui/button';
 import { Input } from '../components/ui/input';
 import { Card, CardContent } from '../components/ui/card';
-import { Checkbox } from '../components/ui/checkbox';
 
 const Funnel = () => {
     const [currentStep, setCurrentStep] = useState(1);

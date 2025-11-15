@@ -110,6 +110,9 @@ const Home = () => {
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
                 Professional Plumbing & HVAC Services
               </h1>
+              <p className="text-lg text-gray-200">
+                CSLB 1145987
+              </p>
               <p className="text-xl md:text-2xl mb-6 text-[#f8a825]">
                 Redlands & Inland Empire's Trusted Home Comfort Experts
               </p>
@@ -169,7 +172,7 @@ const Home = () => {
               </p>
             </div>
             <div className="flex items-center justify-center h-full w-full">
-              <img
+            <img
                   src="/van-taransparent.png"
                   alt="Bucky the Beaver - QuickPros Mascot"
                   className="object-contain h-full w-full"

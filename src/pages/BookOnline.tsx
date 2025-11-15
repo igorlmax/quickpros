@@ -1,10 +1,7 @@
 import { useState } from 'react';
-import { Calendar, Clock, CheckCircle, Phone, MessageSquare } from 'lucide-react';
+import { Calendar, CheckCircle, MessageSquare, Phone } from 'lucide-react';
 import { Button } from '../components/ui/button';
-import { Input } from '../components/ui/input';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../components/ui/select';
 import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
-import { Checkbox } from '../components/ui/checkbox';
 
 const BookOnline = () => {
   const [formData, setFormData] = useState({
@@ -73,15 +70,15 @@ const BookOnline = () => {
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                {/*<iframe*/}
-                {/*    src="https://online-booking.workiz.com/?ac=8f69dba504122e8e9c9a0fcfd2598fcab646d9a9b1a6fb21bf771588cec13a4f"*/}
-                {/*    title="Online Booking"*/}
-                {/*    width="100%"*/}
-                {/*    height="800"*/}
-                {/*    frameBorder="0"*/}
-                {/*    allowFullScreen*/}
-                {/*    className="w-full rounded-lg shadow-lg"*/}
-                {/*></iframe>*/}
+                <iframe
+                    src="https://online-booking.workiz.com/?ac=8f69dba504122e8e9c9a0fcfd2598fcab646d9a9b1a6fb21bf771588cec13a4f"
+                    title="Online Booking"
+                    width="100%"
+                    height="800"
+                    frameBorder="0"
+                    allowFullScreen
+                    className="w-full rounded-lg shadow-lg"
+                ></iframe>
               </CardContent>
             </Card>
           </div>

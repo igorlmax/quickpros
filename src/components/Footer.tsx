@@ -15,8 +15,8 @@ const Footer = () => {
             <div className="flex items-center mb-4">
               <img
                   src="/logo.png"
-                alt="QuickPros Logo" 
-                className="h-10 w-10 mr-3"
+                  alt="QuickPros Logo"
+                  className="h-10 w-10 mr-3"
                   loading="lazy"
 
               />
@@ -27,6 +27,9 @@ const Footer = () => {
             </div>
             <p className="text-gray-300 mb-4">
               Fast. Friendly. Family-Owned. That's the QuickPros Way!
+            </p>
+            <p className="text-gray-300 mb-4">
+              CSLB 1145987
             </p>
           </div>
 

@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
-import { Phone, Share2, Scissors, DollarSign, Clock, Wrench } from 'lucide-react';
+import { Phone, Share2 } from 'lucide-react';
 import { Button } from '../components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
+import { Card, CardContent } from '../components/ui/card';
 
 const Coupons = () => {
 

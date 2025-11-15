@@ -116,11 +116,6 @@ const HVAC = () => {
             <h2 className="text-2xl font-bold text-[#004078] mb-4">
               Ask About Our Maintenance Membership Plans
             </h2>
-            {/*
-            <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-              Join our VIP maintenance program and enjoy priority service, discounted repairs, annual tune-ups, and extended warranties. Keep your HVAC system running efficiently year-round while saving money on service calls.
-            </p>
-            */}
             <Button asChild className="bg-[#004078] hover:bg-[#004078]/90">
               <Link to="/contact">Learn More About Membership</Link>
             </Button>
