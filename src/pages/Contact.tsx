@@ -155,43 +155,42 @@ const Contact = () => {
 
         {/* Map Embed */}
         <div className="mt-16">
-          <h2 className="text-2xl font-bold text-[#004078] mb-6 text-center">Find Us</h2>
-          <div className="bg-gray-200 rounded-lg h-96 flex items-center justify-center">
-            <div className="text-center text-gray-600">
-              <MapPin className="h-12 w-12 mx-auto mb-4"/>
-              <p className="text-lg font-semibold">Interactive Google Maps</p>
-              <p>100 W. Stuart Ave., Redlands, CA 92374</p>
-              <Button asChild className="mt-4 bg-[#004078] hover:bg-[#004078]/90">
-                <a
-                    href="https://maps.google.com/?q=100+W.+Stuart+Ave.,+Redlands,+CA+92374"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                  Open in Google Maps
-                </a>
-              </Button>
+          <h2 className="text-2xl font-bold text-[#004078] mb-6 text-center">Find Us at Two Locations</h2>
+
+          <div className="mt-16">
+            <div className="bg-gray-200 rounded-lg h-96 flex items-center justify-center">
+              <iframe
+                  title="Google Map"
+                  width="100%"
+                  height="100%"
+                  className="rounded-lg border-0 w-full h-96"
+                  style={{ minHeight: 424 }}
+                  loading="lazy"
+                  allowFullScreen
+                  referrerPolicy="no-referrer-when-downgrade"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6808.555740007674!2d-117.20433038874742!3d34.06204661710083!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dcaa4399844dcb%3A0x71cc122837cd0b88!2s1255%20W%20Colton%20Ave%2C%20Redlands%2C%20CA%2092374%2C%20USA!5e1!3m2!1sen!2sch!4v1759097454777!5m2!1sen!2sch"
+              />
             </div>
           </div>
-        </div>
 
-        <div className="mt-16">
-          <h2 className="text-2xl font-bold text-[#004078] mb-6 text-center">Find Us</h2>
-          <div className="bg-gray-200 rounded-lg h-96 flex items-center justify-center">
-            <iframe
-                title="Google Map"
-                width="100%"
-                height="100%"
-                className="rounded-lg border-0 w-full h-96"
-                style={{ minHeight: 424 }}
-                loading="lazy"
-                allowFullScreen
-                referrerPolicy="no-referrer-when-downgrade"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6808.555740007674!2d-117.20433038874742!3d34.06204661710083!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dcaa4399844dcb%3A0x71cc122837cd0b88!2s1255%20W%20Colton%20Ave%2C%20Redlands%2C%20CA%2092374%2C%20USA!5e1!3m2!1sen!2sch!4v1759097454777!5m2!1sen!2sch"
-            />
+          <div className="mt-16">
+            <div className="bg-gray-200 rounded-lg h-96 flex items-center justify-center">
+              <iframe
+                  title="Google Map"
+                  width="100%"
+                  height="100%"
+                  className="rounded-lg border-0 w-full h-96"
+                  style={{ minHeight: 424 }}
+                  loading="lazy"
+                  allowFullScreen
+                  referrerPolicy="no-referrer-when-downgrade"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3253.733571309649!2d-117.18729332428317!3d34.059768373154185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dcaa72a4927d9f%3A0xfe64ebe2a3ee4c32!2s100%20W%20Stuart%20Ave%2C%20Redlands%2C%20CA%2092374%2C%20USA!5e1!3m2!1sen!2shr!4v1763243108021!5m2!1sen!2shr"
+              />
+            </div>
           </div>
-        </div>
 
-      </div>
+        </div>
+        </div>
     </div>
   );
 };
