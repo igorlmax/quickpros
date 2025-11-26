@@ -132,11 +132,18 @@ const HVAC = () => {
               </CardHeader>
               <CardContent>
                 <div className="mb-4">
-                  <img
+                  <picture>
+                    <source srcSet="/before.webp" type="image/webp" />
+                    <img
                       src="/before.jpg"
-                      alt="Before Photo"
-                      className="w-full h-fullobject-cover rounded-lg"
-                  />
+                      alt="HVAC system before service"
+                      className="w-full h-full object-cover rounded-lg"
+                      loading="lazy"
+                      decoding="async"
+                      width="540"
+                      height="360"
+                    />
+                  </picture>
                 </div>
               </CardContent>
             </Card>
@@ -147,11 +154,18 @@ const HVAC = () => {
               </CardHeader>
               <CardContent>
                 <div className="mb-4">
-                  <img
+                  <picture>
+                    <source srcSet="/after.webp" type="image/webp" />
+                    <img
                       src="/after.jpg"
-                      alt="Before Photo"
-                      className="w-full h-fullobject-cover rounded-lg"
-                  />
+                      alt="HVAC system after service"
+                      className="w-full h-full object-cover rounded-lg"
+                      loading="lazy"
+                      decoding="async"
+                      width="540"
+                      height="360"
+                    />
+                  </picture>
                 </div>
               </CardContent>
             </Card>

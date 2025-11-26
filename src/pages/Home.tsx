@@ -178,12 +178,19 @@ const Home = () => {
               </p>
             </div>
             <div className="flex items-center justify-center h-full w-full">
-            <img
+              <picture className="w-full h-full flex items-center justify-center">
+                <source srcSet="/van-taransparent.webp" type="image/webp" />
+                <img
                   src="/van-taransparent.png"
                   alt="Bucky the Beaver - QuickPros Mascot"
                   className="object-contain h-full w-full"
-                  loading="lazy"
-              />
+                  loading="eager"
+                  decoding="async"
+                  fetchPriority="high"
+                  width="640"
+                  height="480"
+                />
+              </picture>
             </div>
           </div>
         </div>
