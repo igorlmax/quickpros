@@ -21541,7 +21541,10 @@ const Header = () => {
             src: "/logo.webp",
             alt: "Bucky the Beaver - QuickPros Mascot",
             className: "h-12 w-12 mr-3",
-            loading: "lazy"
+            loading: "lazy",
+            decoding: "async",
+            width: 240,
+            height: 240
           }
         ),
         /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
@@ -21615,7 +21618,10 @@ const Footer = () => {
               src: "/logo.webp",
               alt: "QuickPros Logo",
               className: "h-10 w-10 mr-3",
-              loading: "lazy"
+              loading: "lazy",
+              decoding: "async",
+              width: 240,
+              height: 240
             }
           ),
           /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
@@ -21908,7 +21914,18 @@ const Home = () => {
                   ] })
                 }
               ),
-              /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex justify-center sm:justify-start w-full sm:w-auto", children: /* @__PURE__ */ jsxRuntimeExports.jsx("img", { src: "/Owned-Badge.png", alt: "QuickPros Logo", className: "h-full lg:h-20 w-auto", loading: "lazy" }) })
+              /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex justify-center sm:justify-start w-full sm:w-auto", children: /* @__PURE__ */ jsxRuntimeExports.jsx(
+                "img",
+                {
+                  src: "/Owned-Badge.png",
+                  alt: "QuickPros Logo",
+                  className: "h-full lg:h-20 w-auto",
+                  loading: "lazy",
+                  decoding: "async",
+                  width: 180,
+                  height: 180
+                }
+              ) })
             ]
           }
         ),
@@ -22425,7 +22442,11 @@ const HVAC = () => {
       {
         src: "/logo.webp",
         alt: "Bucky the Beaver with HVAC Tools",
-        className: "mx-auto max-w-md w-full rounded-lg"
+        className: "mx-auto max-w-md w-full rounded-lg",
+        loading: "lazy",
+        decoding: "async",
+        width: 240,
+        height: 240
       }
     ) }),
     /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16", children: services.map((service, index) => /* @__PURE__ */ jsxRuntimeExports.jsxs(Card, { className: "hover:shadow-lg transition-shadow", children: [

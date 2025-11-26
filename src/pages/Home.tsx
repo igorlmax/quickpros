@@ -168,7 +168,15 @@ const Home = () => {
                 </Button>
 
                 <div className="flex justify-center sm:justify-start w-full sm:w-auto">
-                  <img src="/Owned-Badge.png" alt="QuickPros Logo" className="h-full lg:h-20 w-auto" loading="lazy"/>
+                  <img
+                    src="/Owned-Badge.png"
+                    alt="QuickPros Logo"
+                    className="h-full lg:h-20 w-auto"
+                    loading="lazy"
+                    decoding="async"
+                    width={180}
+                    height={180}
+                  />
                 </div>
               </div>
 

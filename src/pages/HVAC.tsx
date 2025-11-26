@@ -66,6 +66,10 @@ const HVAC = () => {
             src="/logo.webp"
             alt="Bucky the Beaver with HVAC Tools" 
             className="mx-auto max-w-md w-full rounded-lg"
+            loading="lazy"
+            decoding="async"
+            width={240}
+            height={240}
           />
         </div>
 

@@ -16,6 +16,9 @@ const Header = () => {
               alt="Bucky the Beaver - QuickPros Mascot" 
               className="h-12 w-12 mr-3"
               loading="lazy"
+              decoding="async"
+              width={240}
+              height={240}
             />
             <div>
               <p className="text-2xl font-bold text-[#004078]" aria-label="QuickPros">QuickPros</p>

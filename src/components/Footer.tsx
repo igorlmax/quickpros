@@ -14,11 +14,13 @@ const Footer = () => {
           <div>
             <div className="flex items-center mb-4">
               <img
-                  src="/logo.webp"
-                  alt="QuickPros Logo"
-                  className="h-10 w-10 mr-3"
-                  loading="lazy"
-
+                src="/logo.webp"
+                alt="QuickPros Logo"
+                className="h-10 w-10 mr-3"
+                loading="lazy"
+                decoding="async"
+                width={240}
+                height={240}
               />
               <div>
                 <h3 className="text-xl font-bold">QuickPros</h3>
