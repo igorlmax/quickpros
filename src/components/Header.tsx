@@ -12,7 +12,7 @@ const Header = () => {
         <div className="flex items-center justify-between py-4">
           <Link to="/" className="flex items-center">
             <img 
-              src="/logo.png"
+              src="/logo.webp"
               alt="Bucky the Beaver - QuickPros Mascot" 
               className="h-12 w-12 mr-3"
               loading="lazy"

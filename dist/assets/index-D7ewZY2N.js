@@ -21538,7 +21538,7 @@ const Header = () => {
         /* @__PURE__ */ jsxRuntimeExports.jsx(
           "img",
           {
-            src: "/logo.png",
+            src: "/logo.webp",
             alt: "Bucky the Beaver - QuickPros Mascot",
             className: "h-12 w-12 mr-3",
             loading: "lazy"
@@ -21612,7 +21612,7 @@ const Footer = () => {
           /* @__PURE__ */ jsxRuntimeExports.jsx(
             "img",
             {
-              src: "/logo.png",
+              src: "/logo.webp",
               alt: "QuickPros Logo",
               className: "h-10 w-10 mr-3",
               loading: "lazy"
@@ -22423,7 +22423,7 @@ const HVAC = () => {
     /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-center mb-16", children: /* @__PURE__ */ jsxRuntimeExports.jsx(
       "img",
       {
-        src: "/logo.png",
+        src: "/logo.webp",
         alt: "Bucky the Beaver with HVAC Tools",
         className: "mx-auto max-w-md w-full rounded-lg"
       }
