@@ -12,6 +12,9 @@ import ScrollToTop from '@/components/ScrollToTop.tsx';
 import Funnel from '@/pages/Funnel.tsx';
 import Financing from '@/pages/Financing.tsx';
 import Faq from '@/pages/Faq.tsx';
+import About from './pages/About';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import Disclaimer from './pages/Disclaimer';
 
 function App() {
   return (
@@ -30,6 +33,9 @@ function App() {
             <Route path="/faq" element={<Faq />} />
             <Route path="/hvac" element={<HVAC />} />
             <Route path="/coupons" element={<Coupons />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/disclaimer" element={<Disclaimer />} />
           </Routes>
 
         </main>

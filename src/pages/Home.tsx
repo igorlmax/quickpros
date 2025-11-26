@@ -107,12 +107,15 @@ const Home = () => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h1 className="text-2xl md:text-5xl font-bold mb-4">
+              <h1 className="text-xl md:text-5xl font-bold mb-3">
                 Plumber in Redlands, CA | QuickPros Plumbing & Air
               </h1>
-              <h2 className="text-xl md:text-2xl font-semibold text-[#f8a825] mb-4">
+              <h2 className="text-lg md:text-2xl font-semibold text-[#f8a825] mb-2">
                 HVAC Contractor, Heating Repair & Drain Cleaning Experts
               </h2>
+              <h3 className="text-lg md:text-xl font-semibold text-white mb-4">
+                Comprehensive plumbing, HVAC, heating, cooling, drain, and water heater services
+              </h3>
               <p className="text-lg text-gray-200">
                 CSLB 1145987
               </p>
