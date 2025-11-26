@@ -18,7 +18,7 @@ const Header = () => {
               loading="lazy"
             />
             <div>
-              <h1 className="text-2xl font-bold text-[#004078]">QuickPros</h1>
+              <p className="text-2xl font-bold text-[#004078]" aria-label="QuickPros">QuickPros</p>
               <p className="text-sm text-[#e23b19] font-semibold">Plumbing & Air</p>
             </div>
           </Link>

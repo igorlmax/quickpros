@@ -7,37 +7,37 @@ const Home = () => {
   const services = [
     {
       icon: <Wrench className="h-8 w-8 text-[#e23b19]" />,
-      title: "Plumbing",
+      title: "Plumbing Services",
       description: "From leaky faucets to full repipes, QuickPros is your trusted plumbing partner. Our licensed plumbers handle everything from fixture installations and water pressure issues to slab leaks and sewer repairs.",
       details: "Residential & commercial service, repiping, fixture replacement, leak detection, sewer line repair, and water filtration."
     },
     {
       icon: <Thermometer className="h-8 w-8 text-[#e23b19]" />,
-      title: "Heating",
+      title: "Heating Services",
       description: "Stay cozy through the cold with our reliable heating services. We install, repair, and maintain furnaces, heat pumps, and other heating systems so your home is always comfortable.",
       details: "Furnace repair & replacement, heat pump service, tune-ups, energy-efficient heating options."
     },
     {
       icon: <Zap className="h-8 w-8 text-[#e23b19]" />,
-      title: "Air Conditioning",
+      title: "Air Conditioning Services",
       description: "Beat the heat with expert cooling solutions from QuickPros. We keep your home comfortable with top-quality AC installation, repair, and preventative maintenance.",
       details: "AC repair, system installation, tune-ups, ductless mini-splits, thermostat upgrades."
     },
     {
       icon: <Droplets className="h-8 w-8 text-[#e23b19]" />,
-      title: "Drain Cleaning",
+      title: "Drain Cleaning Services",
       description: "Slow or clogged drains can cause big problems fast. Our team uses advanced tools to clear blockages and keep your plumbing system running smoothly.",
       details: "Kitchen & bathroom drains, main line stoppages, hydro jetting, camera inspections, root removal."
     },
     {
       icon: <Shield className="h-8 w-8 text-[#e23b19]" />,
-      title: "Water Heaters",
+      title: "Water Heater Services",
       description: "Hot water when you need it most. QuickPros installs and services both traditional and tankless water heaters to ensure efficiency and long-lasting comfort.",
       details: "Tankless water heaters, water heater repair & installation, maintenance, energy efficient upgrades."
     },
     {
       icon: <Clock className="h-8 w-8 text-[#e23b19]" />,
-      title: "Emergency Repairs",
+      title: "Emergency Repair Services",
       description: "Plumbing or HVAC emergencies don't wait—and neither do we. QuickPros offers fast, dependable 24/7 emergency service to restore your home's comfort and safety.",
       details: "Burst pipes, no-heat/no-cool emergencies, major leaks, backed-up drains, water heater breakdowns."
     }
@@ -107,9 +107,12 @@ const Home = () => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Professional Plumbing & HVAC Services
+              <h1 className="text-2xl md:text-5xl font-bold mb-4">
+                Plumber in Redlands, CA | QuickPros Plumbing & Air
               </h1>
+              <h2 className="text-xl md:text-2xl font-semibold text-[#f8a825] mb-4">
+                HVAC Contractor, Heating Repair & Drain Cleaning Experts
+              </h2>
               <p className="text-lg text-gray-200">
                 CSLB 1145987
               </p>

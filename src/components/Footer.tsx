@@ -88,6 +88,20 @@ const Footer = () => {
           </div>
         </div>
 
+        <div className="mt-12">
+          <h4 className="text-lg font-semibold mb-4 text-center md:text-left">Visit Our Redlands Service Hub</h4>
+          <div className="w-full h-64 rounded-lg overflow-hidden shadow-lg border border-white/10">
+            <iframe
+              title="QuickPros Plumbing & Air on Google Maps"
+              src="https://www.google.com/maps?q=1255+W+Colton+Ave,+Redlands,+CA+92374&output=embed"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              className="w-full h-full border-0"
+              allowFullScreen
+            ></iframe>
+          </div>
+        </div>
+
         <div className="border-t border-gray-600 mt-8 pt-8">
           <div className="text-center mb-4">
             <p className="text-gray-300 text-sm">
