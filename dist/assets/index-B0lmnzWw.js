@@ -21706,146 +21706,92 @@ const Footer = () => {
   ] }) });
 };
 
-const Card = reactExports.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ jsxRuntimeExports.jsx(
-  "div",
-  {
-    ref,
-    className: cn(
-      "rounded-lg border bg-card text-card-foreground shadow-sm",
-      className
-    ),
-    ...props
+const scriptRel = 'modulepreload';const assetsURL = function(dep, importerUrl) { return new URL(dep, importerUrl).href };const seen = {};const __vitePreload = function preload(baseModule, deps, importerUrl) {
+  let promise = Promise.resolve();
+  if (true               && deps && deps.length > 0) {
+    let allSettled2 = function(promises) {
+      return Promise.all(
+        promises.map(
+          (p) => Promise.resolve(p).then(
+            (value) => ({ status: "fulfilled", value }),
+            (reason) => ({ status: "rejected", reason })
+          )
+        )
+      );
+    };
+    const links = document.getElementsByTagName("link");
+    const cspNonceMeta = document.querySelector(
+      "meta[property=csp-nonce]"
+    );
+    const cspNonce = cspNonceMeta?.nonce || cspNonceMeta?.getAttribute("nonce");
+    promise = allSettled2(
+      deps.map((dep) => {
+        dep = assetsURL(dep, importerUrl);
+        if (dep in seen) return;
+        seen[dep] = true;
+        const isCss = dep.endsWith(".css");
+        const cssSelector = isCss ? '[rel="stylesheet"]' : "";
+        const isBaseRelative = !!importerUrl;
+        if (isBaseRelative) {
+          for (let i = links.length - 1; i >= 0; i--) {
+            const link2 = links[i];
+            if (link2.href === dep && (!isCss || link2.rel === "stylesheet")) {
+              return;
+            }
+          }
+        } else if (document.querySelector(`link[href="${dep}"]${cssSelector}`)) {
+          return;
+        }
+        const link = document.createElement("link");
+        link.rel = isCss ? "stylesheet" : scriptRel;
+        if (!isCss) {
+          link.as = "script";
+        }
+        link.crossOrigin = "";
+        link.href = dep;
+        if (cspNonce) {
+          link.setAttribute("nonce", cspNonce);
+        }
+        document.head.appendChild(link);
+        if (isCss) {
+          return new Promise((res, rej) => {
+            link.addEventListener("load", res);
+            link.addEventListener(
+              "error",
+              () => rej(new Error(`Unable to preload CSS for ${dep}`))
+            );
+          });
+        }
+      })
+    );
   }
-));
-Card.displayName = "Card";
-const CardHeader = reactExports.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ jsxRuntimeExports.jsx("div", { ref, className: cn("flex flex-col space-y-1.5 p-6", className), ...props }));
-CardHeader.displayName = "CardHeader";
-const CardTitle = reactExports.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ jsxRuntimeExports.jsx(
-  "h3",
-  {
-    ref,
-    className: cn(
-      "text-2xl font-semibold leading-none tracking-tight",
-      className
-    ),
-    ...props
+  function handlePreloadError(err) {
+    const e = new Event("vite:preloadError", {
+      cancelable: true
+    });
+    e.payload = err;
+    window.dispatchEvent(e);
+    if (!e.defaultPrevented) {
+      throw err;
+    }
   }
-));
-CardTitle.displayName = "CardTitle";
-const CardDescription = reactExports.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ jsxRuntimeExports.jsx(
-  "p",
-  {
-    ref,
-    className: cn("text-sm text-muted-foreground", className),
-    ...props
-  }
-));
-CardDescription.displayName = "CardDescription";
-const CardContent = reactExports.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ jsxRuntimeExports.jsx("div", { ref, className: cn("p-6 pt-0", className), ...props }));
-CardContent.displayName = "CardContent";
-const CardFooter = reactExports.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ jsxRuntimeExports.jsx(
-  "div",
-  {
-    ref,
-    className: cn("flex items-center p-6 pt-0", className),
-    ...props
-  }
-));
-CardFooter.displayName = "CardFooter";
+  return promise.then((res) => {
+    for (const item of res || []) {
+      if (item.status !== "rejected") continue;
+      handlePreloadError(item.reason);
+    }
+    return baseModule().catch(handlePreloadError);
+  });
+};
 
+const FeaturedServices = reactExports.lazy(() => __vitePreload(() => import('./FeaturedServices-VcYDDADs.js'),true              ?[]:void 0,import.meta.url));
+const WhyChooseUs = reactExports.lazy(() => __vitePreload(() => import('./WhyChooseUs-BXH6rjs_.js'),true              ?[]:void 0,import.meta.url));
+const Testimonials = reactExports.lazy(() => __vitePreload(() => import('./Testimonials-Cn1Oq3bK.js'),true              ?[]:void 0,import.meta.url));
+const CtaBanner = reactExports.lazy(() => __vitePreload(() => import('./CtaBanner-BGfscFPs.js'),true              ?[]:void 0,import.meta.url));
+const CouponTeaser = reactExports.lazy(() => __vitePreload(() => import('./CouponTeaser-DR69F_ez.js'),true              ?[]:void 0,import.meta.url));
+const SeoContent = reactExports.lazy(() => __vitePreload(() => import('./SeoContent-BoUUc-cE.js'),true              ?[]:void 0,import.meta.url));
+const SectionFallback = () => /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "py-16 text-center", children: /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-[#004078]", children: "Loading section..." }) });
 const Home = () => {
-  const services = [
-    {
-      icon: /* @__PURE__ */ jsxRuntimeExports.jsx(Wrench, { className: "h-8 w-8 text-[#e23b19]" }),
-      title: "Plumbing Services",
-      description: "From leaky faucets to full repipes, QuickPros is your trusted plumbing partner. Our licensed plumbers handle everything from fixture installations and water pressure issues to slab leaks and sewer repairs.",
-      details: "Residential & commercial service, repiping, fixture replacement, leak detection, sewer line repair, and water filtration."
-    },
-    {
-      icon: /* @__PURE__ */ jsxRuntimeExports.jsx(Thermometer, { className: "h-8 w-8 text-[#e23b19]" }),
-      title: "Heating Services",
-      description: "Stay cozy through the cold with our reliable heating services. We install, repair, and maintain furnaces, heat pumps, and other heating systems so your home is always comfortable.",
-      details: "Furnace repair & replacement, heat pump service, tune-ups, energy-efficient heating options."
-    },
-    {
-      icon: /* @__PURE__ */ jsxRuntimeExports.jsx(Zap, { className: "h-8 w-8 text-[#e23b19]" }),
-      title: "Air Conditioning Services",
-      description: "Beat the heat with expert cooling solutions from QuickPros. We keep your home comfortable with top-quality AC installation, repair, and preventative maintenance.",
-      details: "AC repair, system installation, tune-ups, ductless mini-splits, thermostat upgrades."
-    },
-    {
-      icon: /* @__PURE__ */ jsxRuntimeExports.jsx(Droplets, { className: "h-8 w-8 text-[#e23b19]" }),
-      title: "Drain Cleaning Services",
-      description: "Slow or clogged drains can cause big problems fast. Our team uses advanced tools to clear blockages and keep your plumbing system running smoothly.",
-      details: "Kitchen & bathroom drains, main line stoppages, hydro jetting, camera inspections, root removal."
-    },
-    {
-      icon: /* @__PURE__ */ jsxRuntimeExports.jsx(Shield, { className: "h-8 w-8 text-[#e23b19]" }),
-      title: "Water Heater Services",
-      description: "Hot water when you need it most. QuickPros installs and services both traditional and tankless water heaters to ensure efficiency and long-lasting comfort.",
-      details: "Tankless water heaters, water heater repair & installation, maintenance, energy efficient upgrades."
-    },
-    {
-      icon: /* @__PURE__ */ jsxRuntimeExports.jsx(Clock, { className: "h-8 w-8 text-[#e23b19]" }),
-      title: "Emergency Repair Services",
-      description: "Plumbing or HVAC emergencies don't wait—and neither do we. QuickPros offers fast, dependable 24/7 emergency service to restore your home's comfort and safety.",
-      details: "Burst pipes, no-heat/no-cool emergencies, major leaks, backed-up drains, water heater breakdowns."
-    }
-  ];
-  const whyChooseUs = [
-    {
-      icon: /* @__PURE__ */ jsxRuntimeExports.jsx(Users, { className: "h-6 w-6 text-[#f8a825]" }),
-      title: "Family-Owned",
-      description: "We're a family-owned business proud to serve our community with care and dedication. Our customers are our neighbors, not just numbers."
-    },
-    {
-      icon: /* @__PURE__ */ jsxRuntimeExports.jsx(Shield, { className: "h-6 w-6 text-[#f8a825]" }),
-      title: "Local, Licensed & Insured",
-      description: "As a fully licensed and insured company based in Redlands, CA, you can trust that your home is in safe, qualified hands."
-    },
-    {
-      icon: /* @__PURE__ */ jsxRuntimeExports.jsx(Clock, { className: "h-6 w-6 text-[#f8a825]" }),
-      title: "Same-Day Service",
-      description: "We know plumbing and HVAC issues can't wait. That's why QuickPros offers same-day appointments to get your system running again quickly."
-    },
-    {
-      icon: /* @__PURE__ */ jsxRuntimeExports.jsx(DollarSign, { className: "h-6 w-6 text-[#f8a825]" }),
-      title: "Transparent Pricing",
-      description: "No surprises—just honest, upfront pricing. You'll always know what to expect before work begins."
-    }
-  ];
-  const testimonials = [
-    {
-      Name: "Sarah M. — ",
-      location: "Redlands, CA",
-      rating: 5,
-      text: "QuickPros was amazing! Our AC stopped working on one of the hottest days this summer. The technician showed up on time, explained everything clearly, and had our system cooling again within an hour. Super professional and friendly service!"
-    },
-    {
-      name: "James L.",
-      location: "Yucaipa, CA",
-      rating: 5,
-      text: "I had a water heater issue and QuickPros came out the same day. Fair pricing, no hidden fees, and they treated my home with respect. I’ve already signed up for their maintenance plan because I trust them."
-    },
-    {
-      name: "Maria G.",
-      location: "Highland, CA",
-      rating: 5,
-      text: "From the first call to the job completion, the QuickPros team was courteous, knowledgeable, and efficient. They fixed a stubborn drain problem that other companies couldn’t. Highly recommend!"
-    },
-    {
-      name: "David R.",
-      location: "Loma Linda, CA",
-      rating: 5,
-      text: "QuickPros Plumbing & Air really impressed me. The technician explained my options for a new system without pressure, and the installation went smoothly. Great family-owned company!"
-    },
-    {
-      name: "Amanda K.",
-      location: "San Bernardino, CA",
-      rating: 5,
-      text: "Professional, fast, and affordable! QuickPros replaced a broken pipe in our home and even cleaned up afterward. It’s rare to find a company that goes the extra mile like this."
-    }
-  ];
   return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
     /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "bg-gradient-to-r from-[#00589f] to-[#004078] text-white py-8 lg:py-20", children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "container mx-auto px-4", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "grid grid-cols-1 lg:grid-cols-2 gap-12 items-center", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
@@ -21924,83 +21870,61 @@ const Home = () => {
         }
       ) })
     ] }) }) }),
-    /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "py-16 bg-gray-50", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container mx-auto px-4", children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-center mb-12", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-3xl md:text-4xl font-bold text-[#004078] mb-4", children: "Our Expert Services" }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-lg text-gray-600 max-w-2xl mx-auto", children: "From emergency repairs to routine maintenance, QuickPros has the expertise to keep your home comfortable year-round." })
-      ] }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8", children: services.map((service, index) => /* @__PURE__ */ jsxRuntimeExports.jsx(Card, { className: "hover:shadow-lg transition-shadow", children: /* @__PURE__ */ jsxRuntimeExports.jsxs(CardContent, { className: "p-6", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mb-4", children: service.icon }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "text-xl font-semibold text-[#004078] mb-3", children: service.title }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-gray-600 mb-4", children: service.description }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm text-gray-500", children: service.details })
-      ] }) }, index)) })
-    ] }) }),
-    /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "py-16", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container mx-auto px-4", children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-center mb-12", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-3xl md:text-4xl font-bold text-[#004078] mb-4", children: "Why Choose QuickPros?" }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-lg text-gray-600 max-w-2xl mx-auto", children: "Choosing QuickPros means choosing peace of mind. We combine professional expertise with family values to give you honest service, upfront pricing, and lasting solutions." })
-      ] }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8", children: whyChooseUs.map((item, index) => /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-center", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "bg-[#004078] rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4", children: item.icon }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "text-lg font-semibold text-[#004078] mb-2", children: item.title }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-gray-600 text-sm", children: item.description })
-      ] }, index)) }),
-      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-center mt-8", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-lg font-semibold text-[#004078] mb-2", children: "Financing Available" }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-gray-600", children: "Big repairs don't have to break the bank. We offer flexible financing options so you can get the comfort you need now and pay over time." })
-      ] })
-    ] }) }),
-    /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "py-16 bg-gray-50", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container mx-auto px-4", children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-center mb-12", children: /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-3xl md:text-4xl font-bold text-[#004078] mb-4", children: "What Our Customers Say" }) }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { locationid: "11568939440904783508", className: "review-widget-carousel" }) }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "grid grid-cols-1 md:grid-cols-3 gap-8", children: testimonials.map((testimonial, index) => /* @__PURE__ */ jsxRuntimeExports.jsx(Card, { children: /* @__PURE__ */ jsxRuntimeExports.jsxs(CardContent, { className: "p-6", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex mb-4", children: [...Array(testimonial.rating)].map((_, i) => /* @__PURE__ */ jsxRuntimeExports.jsx(Star, { className: "h-5 w-5 text-[#f8a825] fill-current" }, i)) }),
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("p", { className: "text-gray-600 mb-4", children: [
-          '"',
-          testimonial.text,
-          '"'
-        ] }),
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "font-semibold text-[#004078]", children: testimonial.name }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm text-gray-500", children: testimonial.location })
-        ] })
-      ] }) }, index)) })
-    ] }) }),
-    /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "py-12 bg-[#e23b19]", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container mx-auto px-4 text-center", children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-2xl md:text-3xl font-bold text-white mb-4", children: "Schedule Online & Save $25!" }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-white/90 mb-6 text-lg", children: "Book your appointment online and receive an instant discount on your service." }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx(Button, { asChild: true, size: "lg", className: "bg-white text-[#e23b19] hover:bg-gray-100", children: /* @__PURE__ */ jsxRuntimeExports.jsx(Link, { to: "/book-online", children: "Book Online Now" }) })
-    ] }) }),
-    /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "py-12 bg-[#f8a825]", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container mx-auto px-4 text-center", children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-2xl md:text-3xl font-bold text-[#004078] mb-4", children: "See Our Current Specials!" }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-[#004078]/80 mb-6 text-lg", children: "Save even more with our exclusive deals and seasonal promotions." }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx(Button, { asChild: true, size: "lg", className: "bg-[#004078] text-white hover:bg-[#004078]/90", children: /* @__PURE__ */ jsxRuntimeExports.jsx(Link, { to: "/coupons", children: "View All Coupons" }) })
-    ] }) }),
-    /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "py-16", children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "container mx-auto px-4", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "max-w-4xl mx-auto", children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-2xl font-bold text-[#004078] mb-6", children: "Professional Plumbing and HVAC Services in Redlands, CA" }),
-      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "prose prose-lg max-w-none", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("p", { className: "text-gray-600 mb-4", children: [
-          "When you need reliable ",
-          /* @__PURE__ */ jsxRuntimeExports.jsx("strong", { children: "plumbing in Redlands" }),
-          " or expert ",
-          /* @__PURE__ */ jsxRuntimeExports.jsx("strong", { children: "HVAC in Redlands" }),
-          ", QuickPros Plumbing & Air is your trusted local choice. Our team of ",
-          /* @__PURE__ */ jsxRuntimeExports.jsx("strong", { children: "licensed plumbers in Redlands" }),
-          "and certified HVAC technicians provides comprehensive residential and commercial services throughout the Inland Empire."
-        ] }),
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("p", { className: "text-gray-600 mb-4", children: [
-          "From emergency ",
-          /* @__PURE__ */ jsxRuntimeExports.jsx("strong", { children: "AC repair near me" }),
-          " to complete plumbing system installations, we're your one-stop solution for all home comfort needs. Our ",
-          /* @__PURE__ */ jsxRuntimeExports.jsx("strong", { children: "Inland Empire heating and cooling" }),
-          "specialists are available 24/7 for emergency service, ensuring your family stays comfortable no matter what time of day or night problems arise."
-        ] }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-gray-600", children: "As a family-owned business serving Redlands, Highland, Yucaipa, and surrounding communities, we understand the unique needs of Inland Empire homeowners. Whether you need routine maintenance, emergency repairs, or complete system replacements, QuickPros delivers the quality service and transparent pricing you deserve." })
-      ] })
-    ] }) }) })
+    /* @__PURE__ */ jsxRuntimeExports.jsx(reactExports.Suspense, { fallback: /* @__PURE__ */ jsxRuntimeExports.jsx(SectionFallback, {}), children: /* @__PURE__ */ jsxRuntimeExports.jsx(FeaturedServices, {}) }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx(reactExports.Suspense, { fallback: /* @__PURE__ */ jsxRuntimeExports.jsx(SectionFallback, {}), children: /* @__PURE__ */ jsxRuntimeExports.jsx(WhyChooseUs, {}) }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx(reactExports.Suspense, { fallback: /* @__PURE__ */ jsxRuntimeExports.jsx(SectionFallback, {}), children: /* @__PURE__ */ jsxRuntimeExports.jsx(Testimonials, {}) }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx(reactExports.Suspense, { fallback: /* @__PURE__ */ jsxRuntimeExports.jsx(SectionFallback, {}), children: /* @__PURE__ */ jsxRuntimeExports.jsx(CtaBanner, {}) }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx(reactExports.Suspense, { fallback: /* @__PURE__ */ jsxRuntimeExports.jsx(SectionFallback, {}), children: /* @__PURE__ */ jsxRuntimeExports.jsx(CouponTeaser, {}) }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx(reactExports.Suspense, { fallback: /* @__PURE__ */ jsxRuntimeExports.jsx(SectionFallback, {}), children: /* @__PURE__ */ jsxRuntimeExports.jsx(SeoContent, {}) })
   ] });
 };
+
+const Card = reactExports.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ jsxRuntimeExports.jsx(
+  "div",
+  {
+    ref,
+    className: cn(
+      "rounded-lg border bg-card text-card-foreground shadow-sm",
+      className
+    ),
+    ...props
+  }
+));
+Card.displayName = "Card";
+const CardHeader = reactExports.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ jsxRuntimeExports.jsx("div", { ref, className: cn("flex flex-col space-y-1.5 p-6", className), ...props }));
+CardHeader.displayName = "CardHeader";
+const CardTitle = reactExports.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ jsxRuntimeExports.jsx(
+  "h3",
+  {
+    ref,
+    className: cn(
+      "text-2xl font-semibold leading-none tracking-tight",
+      className
+    ),
+    ...props
+  }
+));
+CardTitle.displayName = "CardTitle";
+const CardDescription = reactExports.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ jsxRuntimeExports.jsx(
+  "p",
+  {
+    ref,
+    className: cn("text-sm text-muted-foreground", className),
+    ...props
+  }
+));
+CardDescription.displayName = "CardDescription";
+const CardContent = reactExports.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ jsxRuntimeExports.jsx("div", { ref, className: cn("p-6 pt-0", className), ...props }));
+CardContent.displayName = "CardContent";
+const CardFooter = reactExports.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ jsxRuntimeExports.jsx(
+  "div",
+  {
+    ref,
+    className: cn("flex items-center p-6 pt-0", className),
+    ...props
+  }
+));
+CardFooter.displayName = "CardFooter";
 
 const Contact = () => {
   const [formData, setFormData] = reactExports.useState({
@@ -23792,3 +23716,5 @@ function App() {
 ReactDOM.createRoot(document.getElementById("root")).render(
   /* @__PURE__ */ jsxRuntimeExports.jsx(React.StrictMode, { children: /* @__PURE__ */ jsxRuntimeExports.jsx(App, {}) })
 );
+
+export { Button as B, Card as C, Droplets as D, Link as L, Shield as S, Thermometer as T, Users as U, Wrench as W, Zap as Z, CardContent as a, Clock as b, DollarSign as c, Star as d, jsxRuntimeExports as j };
