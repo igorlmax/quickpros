@@ -2,12 +2,13 @@
     RewriteEngine On
     RewriteBase /
 
-    RewriteRule ^index\.html$ - [L]
+    # Root loads dist/index.html
+    RewriteRule ^$ dist/index.html [L]
 
+    # All paths map to dist
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteCond %{REQUEST_FILENAME} !-l
-    RewriteRule ^ index.html [L]
+    RewriteRule ^(.*)$ dist/$1 [L]
 </IfModule>
 
 
@@ -22,4 +23,3 @@
     Header set Cache-Control "max-age=31536000, public"
   </FilesMatch>
 </IfModule>
-
