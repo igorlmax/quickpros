@@ -213,7 +213,7 @@ const Funnel = () => {
                             Fast installs. Local experts. Guaranteed comfort.
                         </p>
 
-                        <img src="/Quickpros-Complete-Logo.png" alt="QuickPros Complete Logo" className="mx-auto mb-8"
+                        <img src="/Quickpros-Complete-logo.webp" alt="QuickPros Complete Logo" className="mx-auto mb-8"
                              loading="lazy"/>
 
                         {/* Save $250 Section */}
@@ -345,7 +345,7 @@ const Funnel = () => {
                         <div className="rounded-2xl p-8 shadow-2xl mb-8">
                             <div className="text-center">
                                 <img
-                                    src="/Quickpros-Complete-Logo.png"
+                                    src="/Quickpros-Complete-logo.webp"
                                     alt="QuickPros Plumbing & Air Logo"
                                     className="mx-auto max-w-full h-auto"
                                 />
