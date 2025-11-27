@@ -173,7 +173,7 @@ const Home = () => {
               </div>
 
 
-              <p className="text-sm text-gray-300">
+              <p className="xl:text:lg text-gray-300">
                 Serving Redlands, Highland, Yucaipa, San Bernardino & surrounding areas
               </p>
             </div>

@@ -21912,7 +21912,7 @@ const Home = () => {
             ]
           }
         ),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm text-gray-300", children: "Serving Redlands, Highland, Yucaipa, San Bernardino & surrounding areas" })
+        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "xl:text:lg text-gray-300", children: "Serving Redlands, Highland, Yucaipa, San Bernardino & surrounding areas" })
       ] }),
       /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex items-center justify-center h-full w-full", children: /* @__PURE__ */ jsxRuntimeExports.jsx(
         "img",

@@ -2116,10 +2116,6 @@
     user-select: none;
   }
 
-  .\[hostname\:port\] {
-    hostname: port;
-  }
-
   :where(.divide-x-reverse > :not(:last-child)) {
     --tw-divide-x-reverse: 1;
   }
