@@ -21545,7 +21545,7 @@ const Header = () => {
           }
         ),
         /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx("h1", { className: "text-2xl font-bold text-[#004078]", children: "QuickPros" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-2xl font-bold text-[#004078]", "aria-label": "QuickPros", children: "QuickPros" }),
           /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm text-[#e23b19] font-semibold", children: "Plumbing & Air" })
         ] })
       ] }),
@@ -21674,9 +21674,26 @@ const Footer = () => {
           /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: /* @__PURE__ */ jsxRuntimeExports.jsx(Link, { to: "/coupons", className: "text-gray-300 hover:text-[#f8a825]", children: "Coupons" }) }),
           /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: /* @__PURE__ */ jsxRuntimeExports.jsx(Link, { to: "/faq", className: "text-gray-300 hover:text-[#f8a825]", children: "FAQ" }) }),
           /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: /* @__PURE__ */ jsxRuntimeExports.jsx(Link, { to: "/contact", className: "text-gray-300 hover:text-[#f8a825]", children: "Contact Us" }) }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: /* @__PURE__ */ jsxRuntimeExports.jsx(Link, { to: "/about", className: "text-gray-300 hover:text-[#f8a825]", children: "About Us" }) }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: /* @__PURE__ */ jsxRuntimeExports.jsx(Link, { to: "/privacy-policy", className: "text-gray-300 hover:text-[#f8a825]", children: "Privacy Policy" }) }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: /* @__PURE__ */ jsxRuntimeExports.jsx(Link, { to: "/disclaimer", className: "text-gray-300 hover:text-[#f8a825]", children: "Disclaimer" }) }),
           /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "tel:9519046660", className: "text-[#e23b19] hover:text-[#f8a825] font-semibold", children: "Emergency Service" }) })
         ] })
       ] })
+    ] }),
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-12", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsx("h4", { className: "text-lg font-semibold mb-4 text-center md:text-left", children: "Visit Our Redlands Service Hub" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "w-full h-64 rounded-lg overflow-hidden shadow-lg border border-white/10", children: /* @__PURE__ */ jsxRuntimeExports.jsx(
+        "iframe",
+        {
+          title: "QuickPros Plumbing & Air on Google Maps",
+          src: "https://www.google.com/maps?q=1255+W+Colton+Ave,+Redlands,+CA+92374&output=embed",
+          loading: "lazy",
+          referrerPolicy: "no-referrer-when-downgrade",
+          className: "w-full h-full border-0",
+          allowFullScreen: true
+        }
+      ) })
     ] }),
     /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "border-t border-gray-600 mt-8 pt-8", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-center mb-4", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("p", { className: "text-gray-300 text-sm", children: [
@@ -21740,37 +21757,37 @@ const Home = () => {
   const services = [
     {
       icon: /* @__PURE__ */ jsxRuntimeExports.jsx(Wrench, { className: "h-8 w-8 text-[#e23b19]" }),
-      title: "Plumbing",
+      title: "Plumbing Services",
       description: "From leaky faucets to full repipes, QuickPros is your trusted plumbing partner. Our licensed plumbers handle everything from fixture installations and water pressure issues to slab leaks and sewer repairs.",
       details: "Residential & commercial service, repiping, fixture replacement, leak detection, sewer line repair, and water filtration."
     },
     {
       icon: /* @__PURE__ */ jsxRuntimeExports.jsx(Thermometer, { className: "h-8 w-8 text-[#e23b19]" }),
-      title: "Heating",
+      title: "Heating Services",
       description: "Stay cozy through the cold with our reliable heating services. We install, repair, and maintain furnaces, heat pumps, and other heating systems so your home is always comfortable.",
       details: "Furnace repair & replacement, heat pump service, tune-ups, energy-efficient heating options."
     },
     {
       icon: /* @__PURE__ */ jsxRuntimeExports.jsx(Zap, { className: "h-8 w-8 text-[#e23b19]" }),
-      title: "Air Conditioning",
+      title: "Air Conditioning Services",
       description: "Beat the heat with expert cooling solutions from QuickPros. We keep your home comfortable with top-quality AC installation, repair, and preventative maintenance.",
       details: "AC repair, system installation, tune-ups, ductless mini-splits, thermostat upgrades."
     },
     {
       icon: /* @__PURE__ */ jsxRuntimeExports.jsx(Droplets, { className: "h-8 w-8 text-[#e23b19]" }),
-      title: "Drain Cleaning",
+      title: "Drain Cleaning Services",
       description: "Slow or clogged drains can cause big problems fast. Our team uses advanced tools to clear blockages and keep your plumbing system running smoothly.",
       details: "Kitchen & bathroom drains, main line stoppages, hydro jetting, camera inspections, root removal."
     },
     {
       icon: /* @__PURE__ */ jsxRuntimeExports.jsx(Shield, { className: "h-8 w-8 text-[#e23b19]" }),
-      title: "Water Heaters",
+      title: "Water Heater Services",
       description: "Hot water when you need it most. QuickPros installs and services both traditional and tankless water heaters to ensure efficiency and long-lasting comfort.",
       details: "Tankless water heaters, water heater repair & installation, maintenance, energy efficient upgrades."
     },
     {
       icon: /* @__PURE__ */ jsxRuntimeExports.jsx(Clock, { className: "h-8 w-8 text-[#e23b19]" }),
-      title: "Emergency Repairs",
+      title: "Emergency Repair Services",
       description: "Plumbing or HVAC emergencies don't wait—and neither do we. QuickPros offers fast, dependable 24/7 emergency service to restore your home's comfort and safety.",
       details: "Burst pipes, no-heat/no-cool emergencies, major leaks, backed-up drains, water heater breakdowns."
     }
@@ -21832,7 +21849,9 @@ const Home = () => {
   return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
     /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "bg-gradient-to-r from-[#00589f] to-[#004078] text-white py-8 lg:py-20", children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "container mx-auto px-4", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "grid grid-cols-1 lg:grid-cols-2 gap-12 items-center", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx("h1", { className: "text-4xl md:text-6xl font-bold mb-6", children: "Professional Plumbing & HVAC Services" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("h1", { className: "text-xl md:text-5xl font-bold mb-3", children: "Plumber in Redlands, CA | QuickPros Plumbing & Air" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-lg md:text-2xl font-semibold text-[#f8a825] mb-2", children: "HVAC Contractor, Heating Repair & Drain Cleaning Experts" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "text-lg md:text-xl font-semibold text-white mb-4", children: "Comprehensive plumbing, HVAC, heating, cooling, drain, and water heater services" }),
         /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-lg text-gray-200", children: "CSLB 1145987" }),
         /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xl md:text-2xl mb-6 text-[#f8a825]", children: "Redlands & Inland Empire's Trusted Home Comfort Experts" }),
         /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-lg mb-8 text-gray-200", children: "Licensed, insured, and family-owned. We provide fast, reliable service for all your plumbing and HVAC needs with transparent pricing and same-day appointments." }),
@@ -23476,6 +23495,276 @@ const FAQ = () => {
   ] }) });
 };
 
+const About = () => {
+  const plumbingServices = [
+    "Drain cleaning",
+    "Sewer line repair & replacements",
+    "Water heater repair & installation",
+    "Leak detection",
+    "Repipes & water line repair",
+    "Fixture installation and repairs"
+  ];
+  const hvacServices = [
+    "AC service, repair, and replacement",
+    "Heating & furnace repairs",
+    "Heat pumps",
+    "Ductwork",
+    "Indoor air quality solutions",
+    "System tune-ups and seasonal maintenance"
+  ];
+  return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "bg-white", children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "bg-[#004078] text-white py-16", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container mx-auto px-4", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm uppercase tracking-widest text-[#f8a825] mb-2", children: "Veteran & family owned" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("h1", { className: "text-3xl md:text-5xl font-bold mb-4", children: "About QuickPros Plumbing & Air" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-lg max-w-3xl text-gray-200", children: "QuickPros Plumbing & Air is a veteran-owned, family-owned plumbing and HVAC company proudly serving Yucaipa, Redlands, Highland, Mentone, San Bernardino, and the Inland Empire. We built our business on honesty, reliability, and unmatched customer service — providing homeowners with fast, professional repairs backed by years of hands-on expertise." })
+    ] }) }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "py-16", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container mx-auto px-4 space-y-12", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-2xl font-bold text-[#004078] mb-4", children: "Our Mission" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-gray-700 leading-relaxed", children: "Deliver the highest quality plumbing and HVAC services with integrity, transparency, and dependable care for every customer, every time. We treat every home as if it were our own, and every customer like family." })
+      ] }),
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-2xl font-bold text-[#004078] mb-4", children: "Our Story" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-gray-700 leading-relaxed", children: "QuickPros was founded by experienced trades professionals who saw a need for trustworthy, customer-first service in the home-service industry. With decades of combined experience, our team set out to create a company where craftsmanship, communication, and consistency come first. We’re proud to be the company local families rely on for everything from simple repairs to major system installations." })
+      ] }),
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-2xl font-bold text-[#004078] mb-4", children: "Licensed, Bonded & Insured" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("ul", { className: "list-disc list-inside space-y-2 text-gray-700", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: "CSLB License: 1145987" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: "Fully bonded & insured" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: "Background-checked, skilled technicians" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: "EPA-certified HVAC professionals" })
+        ] })
+      ] }),
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "grid grid-cols-1 md:grid-cols-2 gap-8", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "text-xl font-semibold text-[#004078] mb-3", children: "Plumbing" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("ul", { className: "list-disc list-inside space-y-2 text-gray-700", children: plumbingServices.map((service) => /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: service }, service)) })
+        ] }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "text-xl font-semibold text-[#004078] mb-3", children: "Heating & Cooling" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("ul", { className: "list-disc list-inside space-y-2 text-gray-700", children: hvacServices.map((service) => /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: service }, service)) })
+        ] })
+      ] }),
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-2xl font-bold text-[#004078] mb-4", children: "Our Commitment to You" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("ul", { className: "list-disc list-inside space-y-2 text-gray-700", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: "Honest, upfront communication" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: "Fair pricing with no hidden fees" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: "Respect for your home and property" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: "Clean, professional technicians" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: "Real solutions — not temporary fixes" })
+        ] }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-gray-700 mt-4", children: "Your trust means everything to us, and we work hard to earn it with every call." })
+      ] }),
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-2xl font-bold text-[#004078] mb-4", children: "Contact Us" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "space-y-2 text-gray-700", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { children: "QuickPros Plumbing & Air" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("p", { children: [
+            "Phone: ",
+            /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "tel:9519046660", className: "text-[#e23b19] font-semibold", children: "(951) 904-6660" })
+          ] }),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("p", { children: [
+            "Email: ",
+            /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "mailto:info@quickprosplumbingandair.com", className: "text-[#e23b19] font-semibold", children: "info@quickprosplumbingandair.com" })
+          ] }),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("p", { children: [
+            "Website: ",
+            /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "https://www.quickprosplumbingandair.com", className: "text-[#e23b19] font-semibold", children: "www.quickprosplumbingandair.com" })
+          ] }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { children: "Service Areas: Redlands, Yucaipa, Highland, Mentone, San Bernardino, and surrounding communities." }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { children: "Hours: Monday–Saturday, 7am–7pm (Emergency service available)" })
+        ] })
+      ] })
+    ] }) })
+  ] });
+};
+
+const LAST_UPDATED$1 = "November 26, 2025";
+const PrivacyPolicy = () => {
+  return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "bg-white", children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "bg-[#004078] text-white py-16", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container mx-auto px-4", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm uppercase tracking-widest text-[#f8a825] mb-2", children: "Privacy Policy" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("h1", { className: "text-3xl md:text-5xl font-bold mb-4", children: "Protecting Your Personal Information" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-lg text-gray-200 max-w-3xl", children: "QuickPros Plumbing & Air (“we,” “our,” or “us”) is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your information when you visit our website, submit a service request, or interact with us online." }),
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("p", { className: "text-sm mt-4 text-gray-200", children: [
+        "Last updated: ",
+        LAST_UPDATED$1
+      ] })
+    ] }) }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "py-16", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container mx-auto px-4 space-y-10 text-gray-700", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-2xl font-bold text-[#004078] mb-4", children: "By Using Our Website" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { children: "By using our website, you agree to the terms described in this Privacy Policy." })
+      ] }),
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-2xl font-bold text-[#004078] mb-4", children: "Information We Collect" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "text-xl font-semibold text-[#004078] mb-2", children: "Personal Information" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mb-2", children: "When you contact us, request service, or complete a form, we may collect:" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("ul", { className: "list-disc list-inside space-y-1", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: "Name" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: "Phone number" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: "Email address" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: "Address or service location" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: "Details about your plumbing or HVAC needs" })
+        ] }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "text-xl font-semibold text-[#004078] mb-2 mt-6", children: "Automatically Collected Data" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mb-2", children: "Like most websites, we use cookies and tracking tools to improve performance. This may include:" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("ul", { className: "list-disc list-inside space-y-1", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: "IP address" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: "Browser type" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: "Device information" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: "Pages visited on our site" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: "Referral source" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: "Time spent on site" })
+        ] }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-2", children: "This data helps us improve our website, measure advertising performance, and better understand customer needs." })
+      ] }),
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-2xl font-bold text-[#004078] mb-4", children: "How We Use Your Information" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("ul", { className: "list-disc list-inside space-y-1", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: "Schedule appointments" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: "Provide service quotes" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: "Communicate with you about your service" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: "Respond to questions or support requests" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: "Improve website functionality" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: "Send service reminders or promotional updates" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: "Analyze website traffic and advertising performance" })
+        ] })
+      ] }),
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-2xl font-bold text-[#004078] mb-4", children: "Information Sharing" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mb-2", children: "We do not sell, rent, or trade personal information. We may share your information only with trusted third-party partners who help us operate our business:" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("ul", { className: "list-disc list-inside space-y-1", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: "Google Ads & Google Analytics" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: "CRM platforms (e.g., Workiz)" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: "Email marketing tools" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: "Website hosting companies" })
+        ] }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-2", children: "These companies are required to protect your data and use it only as necessary to support our services." })
+      ] }),
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-2xl font-bold text-[#004078] mb-4", children: "Cookies & Tracking" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mb-2", children: "We may use:" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("ul", { className: "list-disc list-inside space-y-1", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: "Google Ads remarketing" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: "Google Analytics" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: "Meta/Facebook Pixel" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: "Conversion tracking" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: "Session cookies" })
+        ] }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("p", { className: "mt-2", children: [
+          "You may opt out of Google’s tracking cookies here:",
+          " ",
+          /* @__PURE__ */ jsxRuntimeExports.jsx(
+            "a",
+            {
+              href: "https://tools.google.com/dlpage/gaoptout/",
+              className: "text-[#e23b19] font-semibold underline",
+              target: "_blank",
+              rel: "noreferrer",
+              children: "https://tools.google.com/dlpage/gaoptout/"
+            }
+          )
+        ] })
+      ] }),
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-2xl font-bold text-[#004078] mb-4", children: "Data Protection" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { children: "We take reasonable administrative and technical measures to protect your information from unauthorized access, loss, or misuse." })
+      ] }),
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-2xl font-bold text-[#004078] mb-4", children: "Third-Party Links" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { children: "Our website may contain links to external sites. We are not responsible for their content or privacy practices." })
+      ] }),
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-2xl font-bold text-[#004078] mb-4", children: "Children’s Privacy" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { children: "Our website is not intended for children under 13, and we do not knowingly collect information from minors." })
+      ] }),
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-2xl font-bold text-[#004078] mb-4", children: "Your Choices & Data Requests" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mb-2", children: "You may request to update, correct, or delete any personal information we have collected by contacting us at:" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("p", { children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "mailto:privacy@quickprosplumbingandair.com", className: "text-[#e23b19] font-semibold", children: "privacy@quickprosplumbingandair.com" }),
+          " ",
+          "or ",
+          /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "tel:9519046660", className: "text-[#e23b19] font-semibold", children: "(951) 904-6660" })
+        ] })
+      ] }),
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-2xl font-bold text-[#004078] mb-4", children: "Updates to This Policy" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { children: "We may update this Privacy Policy periodically. Any changes will be posted on this page with the updated date." })
+      ] })
+    ] }) })
+  ] });
+};
+
+const LAST_UPDATED = "November 26, 2025";
+const Disclaimer = () => {
+  return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "bg-white", children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "bg-[#004078] text-white py-16", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container mx-auto px-4", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm uppercase tracking-widest text-[#f8a825] mb-2", children: "Disclaimer" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("h1", { className: "text-3xl md:text-5xl font-bold mb-4", children: "Important Website Information" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-lg text-gray-200 max-w-3xl", children: "Please review this disclaimer carefully before using the QuickPros Plumbing & Air website. By visiting our site, you acknowledge and agree to the statements below." }),
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("p", { className: "text-sm mt-4 text-gray-200", children: [
+        "Last updated: ",
+        LAST_UPDATED
+      ] })
+    ] }) }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "py-16", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container mx-auto px-4 space-y-10 text-gray-700", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-2xl font-bold text-[#004078] mb-4", children: "General Information" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { children: "The information on this website is provided for general informational purposes only. While we strive to keep all information accurate and up to date, QuickPros Plumbing & Air makes no guarantees regarding completeness, accuracy, or reliability." }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-4", children: "Nothing on this website constitutes professional plumbing or HVAC advice. For accurate diagnosis, a licensed technician must evaluate your system in person." })
+      ] }),
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-2xl font-bold text-[#004078] mb-4", children: "Service Availability" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { children: "Services, pricing, promotions, and availability may vary by location and may change without notice." })
+      ] }),
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-2xl font-bold text-[#004078] mb-4", children: "No Professional Advice" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { children: "Any troubleshooting, tips, or recommendations provided on this site are for educational purposes only and are not a substitute for professional service." })
+      ] }),
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-2xl font-bold text-[#004078] mb-4", children: "External Links" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { children: "Our site may contain links to third-party websites. We do not control these websites and assume no responsibility for their content, accuracy, or practices." })
+      ] }),
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-2xl font-bold text-[#004078] mb-4", children: "Testimonials" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { children: "Customer reviews and testimonials reflect individual experiences and results may vary. They are not guaranteed or typical outcomes." })
+      ] }),
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-2xl font-bold text-[#004078] mb-4", children: "Promotional Offers" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mb-2", children: "Any discounts or promotions listed on our website:" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("ul", { className: "list-disc list-inside space-y-1", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: "Must be mentioned at the time of booking" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: "Cannot always be combined with other offers" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: "May have exclusions or expiration dates" })
+        ] })
+      ] }),
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-2xl font-bold text-[#004078] mb-4", children: "Limitation of Liability" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { children: "QuickPros Plumbing & Air is not liable for any losses or damages arising from the use of our website, errors in content, or reliance on information provided here." })
+      ] }),
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-2xl font-bold text-[#004078] mb-4", children: "Contact" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { children: "For questions about this Disclaimer, contact us at:" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-2", children: "QuickPros Plumbing & Air" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("p", { children: [
+          "Phone:",
+          " ",
+          /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "tel:9519046660", className: "text-[#e23b19] font-semibold", children: "(951) 904-6660" })
+        ] }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("p", { children: [
+          "Email:",
+          " ",
+          /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "mailto:info@quickprosplumbingandair.com", className: "text-[#e23b19] font-semibold", children: "info@quickprosplumbingandair.com" })
+        ] })
+      ] })
+    ] }) })
+  ] });
+};
+
 function App() {
   return /* @__PURE__ */ jsxRuntimeExports.jsx(BrowserRouter, { children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "min-h-screen bg-white", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsx(Header, {}),
@@ -23490,7 +23779,10 @@ function App() {
         /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "/plumbing", element: /* @__PURE__ */ jsxRuntimeExports.jsx(Plumbing, {}) }),
         /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "/faq", element: /* @__PURE__ */ jsxRuntimeExports.jsx(FAQ, {}) }),
         /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "/hvac", element: /* @__PURE__ */ jsxRuntimeExports.jsx(HVAC, {}) }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "/coupons", element: /* @__PURE__ */ jsxRuntimeExports.jsx(Coupons, {}) })
+        /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "/coupons", element: /* @__PURE__ */ jsxRuntimeExports.jsx(Coupons, {}) }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "/about", element: /* @__PURE__ */ jsxRuntimeExports.jsx(About, {}) }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "/privacy-policy", element: /* @__PURE__ */ jsxRuntimeExports.jsx(PrivacyPolicy, {}) }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "/disclaimer", element: /* @__PURE__ */ jsxRuntimeExports.jsx(Disclaimer, {}) })
       ] })
     ] }),
     /* @__PURE__ */ jsxRuntimeExports.jsx(Footer, {})
