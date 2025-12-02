@@ -2,6 +2,15 @@ import { useState } from 'react';
 import { Clock, Mail, MapPin, MessageSquare, Phone } from 'lucide-react';
 import { Button } from '../components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
+import { Input } from '../components/ui/input';
+import { Textarea } from '../components/ui/textarea';
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from '../components/ui/select';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -11,11 +20,39 @@ const Contact = () => {
     service: '',
     message: ''
   });
+  const [status, setStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [submitting, setSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    // Handle form submission here
+    setSubmitting(true);
+    setStatus('idle');
+    try {
+      const response = await fetch('/sendmail.php', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+      const text = await response.text();
+      if (text.trim() === 'success') {
+        setStatus('success');
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          service: '',
+          message: ''
+        });
+      } else {
+        setStatus('error');
+      }
+    } catch {
+      setStatus('error');
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   const handleInputChange = (field: string, value: string) => {
@@ -43,13 +80,78 @@ const Contact = () => {
               <CardTitle className="text-2xl text-[#004078]">Send Us a Message</CardTitle>
             </CardHeader>
             <CardContent>
-              <iframe
-                  src="https://st.sendajob.com/MY/servicerequest/d82d54387f73c8d1762b557058d5aec309b09ace_f.html"
-                  className="w-full mb-8 rounded"
-                  style={{ minHeight: 400, border: 'none', overflow: 'hidden' }}
-                  title="Service Request Form"
-                  scrolling="no"
-              />
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div>
+                    <label className="block text-sm font-medium text-[#004078] mb-1">Name</label>
+                    <Input
+                      required
+                      placeholder="Your full name"
+                      value={formData.name}
+                      onChange={(e) => handleInputChange('name', e.target.value)}
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-[#004078] mb-1">Email</label>
+                    <Input
+                      required
+                      type="email"
+                      placeholder="you@example.com"
+                      value={formData.email}
+                      onChange={(e) => handleInputChange('email', e.target.value)}
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-[#004078] mb-1">Phone</label>
+                    <Input
+                      required
+                      type="tel"
+                      placeholder="(951) 904-6660"
+                      value={formData.phone}
+                      onChange={(e) => handleInputChange('phone', e.target.value)}
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-[#004078] mb-1">Service</label>
+                    <Select
+                      value={formData.service}
+                      onValueChange={(v) => handleInputChange('service', v)}
+                    >
+                      <SelectTrigger>
+                        <SelectValue placeholder="Select a service" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="plumbing">Plumbing</SelectItem>
+                        <SelectItem value="hvac">HVAC</SelectItem>
+                        <SelectItem value="drain">Drain Cleaning</SelectItem>
+                        <SelectItem value="water-heater">Water Heater</SelectItem>
+                        <SelectItem value="other">Other</SelectItem>
+                      </SelectContent>
+                    </Select>
+                  </div>
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-[#004078] mb-1">How can we help?</label>
+                  <Textarea
+                    required
+                    placeholder="Tell us a bit about your issue..."
+                    value={formData.message}
+                    onChange={(e) => handleInputChange('message', e.target.value)}
+                    className="min-h-[120px]"
+                  />
+                </div>
+                <div className="flex items-center gap-4">
+                  <Button type="submit" disabled={submitting}>
+                    {submitting ? 'Sending...' : 'Send Message'}
+                  </Button>
+                  {status === 'success' && (
+                    <span className="text-green-600">Thanks! We received your message.</span>
+                  )}
+                  {status === 'error' && (
+                    <span className="text-red-600">Something went wrong. Please try again.</span>
+                  )}
+                </div>
+              </form>
 
               <div className="bg-gray-50 rounded-lg p-6 mt-8 shadow-inner">
                 <h3 className="text-xl font-semibold text-[#004078] mb-2">Why Contact Us?</h3>
