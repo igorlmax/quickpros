@@ -27492,7 +27492,8 @@ const Contact = () => {
     email: "",
     phone: "",
     service: "",
-    message: ""
+    message: "",
+    website: ""
   });
   const [status, setStatus] = reactExports.useState("idle");
   const [submitting, setSubmitting] = reactExports.useState(false);
@@ -27512,6 +27513,7 @@ const Contact = () => {
       if (text.trim() === "success") {
         setStatus("success");
         setFormData({
+          website: "",
           name: "",
           email: "",
           phone: "",
@@ -27540,6 +27542,19 @@ const Contact = () => {
         /* @__PURE__ */ jsxRuntimeExports.jsx(CardHeader, { children: /* @__PURE__ */ jsxRuntimeExports.jsx(CardTitle, { className: "text-2xl text-[#004078]", children: "Send Us a Message" }) }),
         /* @__PURE__ */ jsxRuntimeExports.jsxs(CardContent, { children: [
           /* @__PURE__ */ jsxRuntimeExports.jsxs("form", { onSubmit: handleSubmit, className: "space-y-6", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { style: { position: "absolute", left: "-10000px", top: "auto", width: 1, height: 1, overflow: "hidden" }, "aria-hidden": "true", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("label", { children: [
+              "Do not fill this field",
+              /* @__PURE__ */ jsxRuntimeExports.jsx(
+                "input",
+                {
+                  type: "text",
+                  tabIndex: -1,
+                  autoComplete: "off",
+                  value: formData.website,
+                  onChange: (e) => handleInputChange("website", e.target.value)
+                }
+              )
+            ] }) }),
             /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "grid grid-cols-1 md:grid-cols-2 gap-4", children: [
               /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
                 /* @__PURE__ */ jsxRuntimeExports.jsx("label", { className: "block text-sm font-medium text-[#004078] mb-1", children: "Name" }),

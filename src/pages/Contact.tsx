@@ -40,6 +40,7 @@ const Contact = () => {
       if (text.trim() === 'success') {
         setStatus('success');
         setFormData({
+          website: '',
           name: '',
           email: '',
           phone: '',
