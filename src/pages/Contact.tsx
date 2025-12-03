@@ -18,7 +18,8 @@ const Contact = () => {
     email: '',
     phone: '',
     service: '',
-    message: ''
+    message: '',
+    website: ''
   });
   const [status, setStatus] = useState<'idle' | 'success' | 'error'>('idle');
   const [submitting, setSubmitting] = useState(false);
@@ -81,6 +82,19 @@ const Contact = () => {
             </CardHeader>
             <CardContent>
               <form onSubmit={handleSubmit} className="space-y-6">
+                {/* Honeypot field (hidden from real users) */}
+                <div style={{ position: 'absolute', left: '-10000px', top: 'auto', width: 1, height: 1, overflow: 'hidden' }} aria-hidden="true">
+                  <label>
+                    Do not fill this field
+                    <input
+                      type="text"
+                      tabIndex={-1}
+                      autoComplete="off"
+                      value={formData.website}
+                      onChange={(e) => handleInputChange('website', e.target.value)}
+                    />
+                  </label>
+                </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-sm font-medium text-[#004078] mb-1">Name</label>

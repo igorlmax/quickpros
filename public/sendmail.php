@@ -29,7 +29,14 @@ $service         = isset($data['service']) ? $sanitize($data['service']) : '';
 $message         = isset($data['message']) ? $sanitize($data['message']) : '';
 $zipCode         = isset($data['zipCode']) ? $sanitize($data['zipCode']) : '';
 $waterHeaterType = isset($data['waterHeaterType']) ? $sanitize($data['waterHeaterType']) : '';
+$honeypot        = isset($data['website']) ? $sanitize($data['website']) : '';
 
+// Honeypot check: if filled, treat as spam (do not send)
+if ($honeypot !== '') {
+    // Optionally pretend success to avoid tipping off bots
+    echo 'success';
+    exit;
+}
 // Mail configuration via environment (no hardcoded secrets)
 $to      = getenv('CONTACT_TO_EMAIL') ?: 'miked@quickprosplumbingandair.com';
 $from    = getenv('SMTP_USERNAME') ?: 'no-reply@quickprosplumbingandair.com';
