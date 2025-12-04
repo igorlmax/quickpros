@@ -1,3 +1,6 @@
+# Set the directory index to /dist/index.html
+DirectoryIndex /dist/index.html
+
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
