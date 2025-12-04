@@ -1,63 +1,19 @@
-############################################
-# Security Headers and SPA Routing (.htaccess)
-# Target: Apache (GoDaddy/cPanel compatible)
-############################################
-
-<IfModule mod_headers.c>
-  # Prevent MIME type sniffing
-  Header always set X-Content-Type-Options "nosniff"
-
-  # Clickjacking protection
-  Header always set X-Frame-Options "DENY"
-
-  # HSTS (requires valid HTTPS)
-  # Note: Do not enable preload unless the domain is submitted to hstspreload.org
-  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
-
-  # Referrer policy
-  Header always set Referrer-Policy "strict-origin-when-cross-origin"
-
-  # Optional: Permissions Policy (tighten as needed)
-  Header always set Permissions-Policy "geolocation=(), microphone=(), camera=(), payment=()"
-
-  # Content Security Policy
-  # Adjust sources based on actual integrations (GTM, GA, Google Maps)
-  Header set Content-Security-Policy "default-src 'self' https:; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com; connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com https://stats.g.doubleclick.net; img-src 'self' data: https:; style-src 'self' 'unsafe-inline' https:; font-src 'self' data: https:; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; frame-src https://*.google.com https://*.gstatic.com;"
-</IfModule>
-
-############################################
-# Force HTTPS (if not behind a proxy like Cloudflare)
-############################################
 <IfModule mod_rewrite.c>
   RewriteEngine On
+  RewriteBase /
 
-  # If you want to force HTTPS at origin (optional if Cloudflare handles it)
-  RewriteCond %{HTTPS} !=on
-  RewriteCond %{HTTP:X-Forwarded-Proto} !https
-  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-
-  # Sendmail endpoint should not be rewritten
-  RewriteRule ^sendmail\.php$ - [L]
-
-  # Do not rewrite real files or directories
+  # Serve real files in place (assets, etc.)
   RewriteCond %{REQUEST_FILENAME} -f [OR]
   RewriteCond %{REQUEST_FILENAME} -d
-  RewriteRule . - [L]
+  RewriteRule ^ - [L]
 
-  # SPA fallback to index.html (relative path in per-dir context)
-  RewriteRule . index.html [L]
+  # If the matching file exists under /dist, serve it
+  RewriteCond %{DOCUMENT_ROOT}/dist%{REQUEST_URI} -f
+  RewriteRule ^(.*)$ /dist/$1 [L]
+
+  # Otherwise hand the request to the SPA entry point
+  RewriteRule ^ /dist/index.html [L]
 </IfModule>
 
-############################################
-# Sensible caching for static assets (customize as needed)
-############################################
-<IfModule mod_expires.c>
-  ExpiresActive On
-  ExpiresByType text/html "access plus 0 seconds"
-  ExpiresByType text/css "access plus 7 days"
-  ExpiresByType application/javascript "access plus 7 days"
-  ExpiresByType image/webp "access plus 30 days"
-  ExpiresByType image/png "access plus 30 days"
-  ExpiresByType image/jpeg "access plus 30 days"
-  ExpiresDefault "access plus 1 day"
-</IfModule>
+# Optional: avoid Apache looking for a missing error page
+ErrorDocument 404 /dist/index.html
